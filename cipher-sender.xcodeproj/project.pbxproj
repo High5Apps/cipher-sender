@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2091D291F8530C500ADC34B /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2091D231F8530C500ADC34B /* CustomCell.m */; };
+		C2091D2A1F8530C500ADC34B /* CusomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2091D271F8530C500ADC34B /* CusomTextView.m */; };
+		C2091D2B1F8530C500ADC34B /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C2091D281F8530C500ADC34B /* CustomButton.m */; };
 		C2731DFE1F85253200546FF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2731DFD1F85253200546FF8 /* AppDelegate.m */; };
 		C2731E011F85253200546FF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2731E001F85253200546FF8 /* ViewController.m */; };
 		C2731E041F85253200546FF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2731E021F85253200546FF8 /* Main.storyboard */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2091D231F8530C500ADC34B /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		C2091D241F8530C500ADC34B /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		C2091D251F8530C500ADC34B /* CusomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CusomTextView.h; sourceTree = "<group>"; };
+		C2091D261F8530C500ADC34B /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		C2091D271F8530C500ADC34B /* CusomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CusomTextView.m; sourceTree = "<group>"; };
+		C2091D281F8530C500ADC34B /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		C2731DF91F85253200546FF8 /* cipher-sender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cipher-sender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2731DFC1F85253200546FF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2731DFD1F85253200546FF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +48,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2091D221F85305C00ADC34B /* Custom UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				C2091D251F8530C500ADC34B /* CusomTextView.h */,
+				C2091D271F8530C500ADC34B /* CusomTextView.m */,
+				C2091D241F8530C500ADC34B /* CustomButton.h */,
+				C2091D281F8530C500ADC34B /* CustomButton.m */,
+				C2091D261F8530C500ADC34B /* CustomCell.h */,
+				C2091D231F8530C500ADC34B /* CustomCell.m */,
+			);
+			path = "Custom UI Elements";
+			sourceTree = "<group>";
+		};
 		C2731DF01F85253200546FF8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +80,7 @@
 		C2731DFB1F85253200546FF8 /* cipher-sender */ = {
 			isa = PBXGroup;
 			children = (
+				C2091D221F85305C00ADC34B /* Custom UI Elements */,
 				C2731DFC1F85253200546FF8 /* AppDelegate.h */,
 				C2731DFD1F85253200546FF8 /* AppDelegate.m */,
 				C2731DFF1F85253200546FF8 /* ViewController.h */,
@@ -142,8 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2091D2B1F8530C500ADC34B /* CustomButton.m in Sources */,
+				C2091D2A1F8530C500ADC34B /* CusomTextView.m in Sources */,
 				C2731E011F85253200546FF8 /* ViewController.m in Sources */,
 				C2731E0C1F85253200546FF8 /* main.m in Sources */,
+				C2091D291F8530C500ADC34B /* CustomCell.m in Sources */,
 				C2731DFE1F85253200546FF8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
