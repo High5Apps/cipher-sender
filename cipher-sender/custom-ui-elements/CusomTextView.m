@@ -27,5 +27,6 @@
     [self.layer setBorderWidth:1.0f];
     float grayscale = 192.0/255;
     [self.layer setBorderColor:[[UIColor colorWithRed:grayscale green:grayscale blue:grayscale alpha:1]CGColor]];
+    self.keyboardAppearance = UIKeyboardAppearanceDark;
 }
 @end

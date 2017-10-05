@@ -99,7 +99,9 @@
 
 - (void)showAlertForCipher: (AbstractCipher *)cipher{
     UIAlertController *keyAlert = [UIAlertController alertControllerWithTitle:@"Key" message:cipher.keyPrompt preferredStyle:UIAlertControllerStyleAlert];
-    [keyAlert addTextFieldWithConfigurationHandler:NULL];
+    [keyAlert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.keyboardAppearance = UIKeyboardAppearanceDark;
+    }];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:NULL];
     [keyAlert addAction:cancelAction];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
