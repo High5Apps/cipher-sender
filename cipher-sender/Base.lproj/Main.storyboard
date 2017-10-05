@@ -43,6 +43,9 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFT-0h-iQN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9G-Yf-xtz" customClass="CustomButton">
                                 <rect key="frame" x="199" y="603" width="160" height="44"/>
@@ -52,6 +55,9 @@
                                 <state key="normal" title="Paste">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pastePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="01Q-Sm-75Y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yx9-cv-aMW" customClass="CustomButton">
                                 <rect key="frame" x="199" y="551" width="160" height="44"/>
@@ -61,6 +67,9 @@
                                 <state key="normal" title="Decipher">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="decipher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lBf-bF-3S6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzJ-SU-2zj" customClass="CustomButton">
                                 <rect key="frame" x="289" y="321" width="70" height="44"/>
@@ -72,6 +81,9 @@
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDh-aw-aYp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owl-uJ-WsD" customClass="CustomButton">
                                 <rect key="frame" x="16" y="321" width="257" height="44"/>
@@ -80,6 +92,9 @@
                                 <state key="normal" title="Cipher Selector">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cipherTypePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAk-FY-1ac"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rL-eQ-Dgi" customClass="CustomButton">
                                 <rect key="frame" x="16" y="551" width="160" height="44"/>
@@ -89,6 +104,9 @@
                                 <state key="normal" title="Encipher">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="encipher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dC-9O-i3A"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70u-me-8UY">
                                 <rect key="frame" x="337" y="28" width="22" height="22"/>
@@ -97,6 +115,9 @@
                                     <constraint firstAttribute="height" constant="22" id="Sg4-u0-3A7"/>
                                 </constraints>
                                 <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="showInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FwP-Ab-at8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,6 +140,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cipherTypeButton" destination="owl-uJ-WsD" id="TpL-QC-STM"/>
+                        <outlet property="clearButton" destination="PzJ-SU-2zj" id="Hlk-CB-qVO"/>
+                        <outlet property="textView" destination="REQ-Cz-otY" id="IyD-Go-474"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
