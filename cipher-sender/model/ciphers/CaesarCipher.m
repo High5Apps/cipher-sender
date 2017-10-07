@@ -47,6 +47,10 @@
 }
 
 - (BOOL)isAcceptableKey:(NSString *)key{
+    if (key.length == 0) {
+        return NO;
+    }
+    
     if ([key intValue] == 0) { //Either not a number or 0
         if ([key characterAtIndex:0] == '0' && [key length] == 1) {
             return YES;

@@ -53,6 +53,10 @@
 }
 
 - (BOOL)isAcceptableKey:(NSString *)key{
+    if (key.length == 0) {
+        return NO;
+    }
+    
     const char *charArr = [key UTF8String];
     for (int i = 0; i < [key length]; i++) {
         char c = charArr[i];
