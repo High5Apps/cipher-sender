@@ -23,6 +23,9 @@
     [[UINavigationBar appearance] setTitleTextAttributes:textAttributes];
     [[UINavigationBar appearance] setTranslucent:NO];
     
+    NSDictionary *buttonTextAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"CourierNewPS-BoldMT" size:15], NSForegroundColorAttributeName: [UIColor greenColor]};
+    [[UIBarButtonItem appearance] setTitleTextAttributes:buttonTextAttributes forState:UIControlStateNormal];
+    
     self.viewController = (ViewController *)self.window.rootViewController;
     
     return YES;

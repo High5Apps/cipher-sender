@@ -44,12 +44,8 @@
     UIToolbar *doneBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 33)];
     doneBar.barStyle = UIBarStyleBlackTranslucent;
     UIBarButtonItem *clearBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(clear:)];
-    NSDictionary *buttonTextAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"CourierNewPS-BoldMT" size:15], NSForegroundColorAttributeName: [UIColor greenColor]};
-    [clearBarButton setTitleTextAttributes:buttonTextAttributes forState:UIControlStateNormal];
     UIBarButtonItem *copyButton = [[UIBarButtonItem alloc] initWithTitle:@"Copy" style:UIBarButtonItemStylePlain target:self action:@selector(copyPressed:)];
-    [copyButton setTitleTextAttributes:buttonTextAttributes forState:UIControlStateNormal];
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard)];
-    [doneButton setTitleTextAttributes:buttonTextAttributes forState:UIControlStateNormal];
     UIBarButtonItem *flexibleSpaceLeft = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     UIBarButtonItem *flexibleSpaceLeft2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [doneBar setItems:@[clearBarButton, flexibleSpaceLeft, copyButton, flexibleSpaceLeft2, doneButton]];
@@ -136,15 +132,10 @@
 }
 
 - (IBAction)send:(id)sender{
-    NSLog(@"send txt");
-//    if ([MFMessageComposeViewController canSendText]) {
-//        MFMessageComposeViewController *messageSender = [[MFMessageComposeViewController alloc] init];
-//        messageSender.messageComposeDelegate = self;
-//        messageSender.body = self.textView.text;
-//        [self presentViewController:messageSender animated:YES completion:nil];
-//    }else {
-//        NSLog(@"Can't send text :(");
-//    }
+    NSString *text = self.textView.text;
+    NSArray *items = @[text];
+    UIActivityViewController *controller = [[UIActivityViewController alloc]initWithActivityItems:items applicationActivities:nil];
+    [self presentViewController:controller animated:YES completion:NULL];
 }
 
 - (IBAction)copyPressed:(id)sender{
