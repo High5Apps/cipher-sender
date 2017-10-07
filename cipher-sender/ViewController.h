@@ -13,12 +13,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) IBOutlet UIButton *cipherTypeButton;
-//@property (strong, nonatomic) IBOutlet UILabel *arrowLabel;
 @property (strong, nonatomic) IBOutlet UIButton *clearButton;
-//@property (strong, nonatomic) IBOutlet UIButton *encipherButton;
-//@property (strong, nonatomic) IBOutlet UIButton *decipherButton;
-//@property (strong, nonatomic) IBOutlet UIButton *sendTextButton;
-//@property (strong, nonatomic) IBOutlet UIButton *pasteButton;
 
 - (IBAction)showInfo:(id)sender;
 - (IBAction)encipher:(id)sender;
@@ -29,5 +24,6 @@
 - (IBAction)clear:(id)sender;
 - (IBAction)cipherTypePressed:(id)sender;
 
-@end
+- (void)saveUserData;
 
+@end

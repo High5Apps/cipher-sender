@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) ViewController *viewController;
 @end
 
 @implementation AppDelegate
@@ -21,6 +22,9 @@
     NSDictionary *textAttributes = @{NSFontAttributeName:[UIFont fontWithName:@"CourierNewPS-BoldMT" size:15], NSForegroundColorAttributeName:[UIColor greenColor]};
     [[UINavigationBar appearance] setTitleTextAttributes:textAttributes];
     [[UINavigationBar appearance] setTranslucent:NO];
+    
+    self.viewController = (ViewController *)self.window.rootViewController;
+    
     return YES;
 }
 
@@ -34,6 +38,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [self.viewController saveUserData];
 }
 
 

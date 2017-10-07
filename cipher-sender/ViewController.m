@@ -56,6 +56,14 @@
     [self.textView setInputAccessoryView:doneBar];
 }
 
+- (void)saveUserData{
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs synchronize];
+    [prefs setValue:self.textView.text forKey:@"inputText"];
+    int cipherNumber = (int)[[CipherFactory cipherNames] indexOfObject:self.myCipherType];
+    [prefs setInteger:cipherNumber forKey:@"cipherType"];
+}
+
 - (void)dismissKeyboard{
     [self.textView resignFirstResponder];
 }
