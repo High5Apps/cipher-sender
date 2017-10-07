@@ -116,7 +116,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="showInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FwP-Ab-at8"/>
+                                    <segue destination="m3E-YK-RfX" kind="presentation" modalTransitionStyle="flipHorizontal" id="oOG-wI-0TU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,6 +149,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="vqk-ZR-38e">
+            <objects>
+                <viewController id="CNZ-lQ-1vk" customClass="FlipsideViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8eE-fn-k3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sln-lq-qHA" customClass="CustomButton">
+                                <rect key="frame" x="16" y="551" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
+                                <state key="normal" title="Cipher Info">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="about:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="nav-mP-Sj4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfL-jS-oxv" customClass="CustomButton">
+                                <rect key="frame" x="16" y="603" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="15"/>
+                                <state key="normal" title="Contact Us">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="contact:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="d4f-Lg-8ci"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="7iS-HI-uCd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info" id="zLY-Ol-FCJ">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="Frl-Pl-EbJ">
+                            <connections>
+                                <action selector="done:" destination="CNZ-lQ-1vk" id="vZ1-3i-FuP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frd-yM-1Yg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1135.2" y="29.23538230884558"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rVX-zZ-Zk0">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayg-5g-RSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m3E-YK-RfX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iBr-A1-MAb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CNZ-lQ-1vk" kind="relationship" relationship="rootViewController" id="fkU-Jr-Ith"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="795.20000000000005" y="28.785607196401802"/>
         </scene>
     </scenes>
 </document>

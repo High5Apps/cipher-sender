@@ -32,6 +32,8 @@
 		C28EC8131F864DF300FA6B00 /* CipherFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC8071F864DF300FA6B00 /* CipherFactory.m */; };
 		C28EC8141F864DF300FA6B00 /* Atbash.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC8091F864DF300FA6B00 /* Atbash.m */; };
 		C28EC8171F8655EE00FA6B00 /* CipherPickerTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC8161F8655EE00FA6B00 /* CipherPickerTVC.m */; };
+		C2971F771F88F83F00C5B264 /* AboutCiphersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2971F741F88F83E00C5B264 /* AboutCiphersTableViewController.m */; };
+		C2971F781F88F83F00C5B264 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2971F761F88F83E00C5B264 /* FlipsideViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +85,10 @@
 		C28EC80A1F864DF300FA6B00 /* Rot13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rot13.h; sourceTree = "<group>"; };
 		C28EC8151F8655EE00FA6B00 /* CipherPickerTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherPickerTVC.h; sourceTree = "<group>"; };
 		C28EC8161F8655EE00FA6B00 /* CipherPickerTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherPickerTVC.m; sourceTree = "<group>"; };
+		C2971F731F88F83E00C5B264 /* AboutCiphersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutCiphersTableViewController.h; sourceTree = "<group>"; };
+		C2971F741F88F83E00C5B264 /* AboutCiphersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCiphersTableViewController.m; sourceTree = "<group>"; };
+		C2971F751F88F83E00C5B264 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		C2971F761F88F83E00C5B264 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +134,14 @@
 		C2731DFB1F85253200546FF8 /* cipher-sender */ = {
 			isa = PBXGroup;
 			children = (
+				C2971F731F88F83E00C5B264 /* AboutCiphersTableViewController.h */,
+				C2971F741F88F83E00C5B264 /* AboutCiphersTableViewController.m */,
 				C2731DFC1F85253200546FF8 /* AppDelegate.h */,
 				C2731DFD1F85253200546FF8 /* AppDelegate.m */,
 				C28EC8151F8655EE00FA6B00 /* CipherPickerTVC.h */,
 				C28EC8161F8655EE00FA6B00 /* CipherPickerTVC.m */,
+				C2971F751F88F83E00C5B264 /* FlipsideViewController.h */,
+				C2971F761F88F83E00C5B264 /* FlipsideViewController.m */,
 				C2731DFF1F85253200546FF8 /* ViewController.h */,
 				C2731E001F85253200546FF8 /* ViewController.m */,
 				C2731E021F85253200546FF8 /* Main.storyboard */,
@@ -279,9 +289,11 @@
 				C28EC7F01F864DDA00FA6B00 /* KeylessCipher.m in Sources */,
 				C28EC7F11F864DDA00FA6B00 /* AbstractCipher.m in Sources */,
 				C28EC7F61F864DE600FA6B00 /* Alphabet.m in Sources */,
+				C2971F781F88F83F00C5B264 /* FlipsideViewController.m in Sources */,
 				C2091D2A1F8530C500ADC34B /* CusomTextView.m in Sources */,
 				C28EC80E1F864DF300FA6B00 /* LetterNumber.m in Sources */,
 				C28EC80C1F864DF300FA6B00 /* KeyboardCode.m in Sources */,
+				C2971F771F88F83F00C5B264 /* AboutCiphersTableViewController.m in Sources */,
 				C2731E011F85253200546FF8 /* ViewController.m in Sources */,
 				C2731E0C1F85253200546FF8 /* main.m in Sources */,
 				C2091D291F8530C500ADC34B /* CustomCell.m in Sources */,

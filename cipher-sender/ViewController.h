@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "CipherPickerTVC.h"
+#import "FlipsideViewController.h"
 
-@interface ViewController : UIViewController<CipherPickerTVCDelegate>
+@interface ViewController : UIViewController<CipherPickerTVCDelegate, FlipsideViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) IBOutlet UIButton *cipherTypeButton;
 @property (strong, nonatomic) IBOutlet UIButton *clearButton;
 
-- (IBAction)showInfo:(id)sender;
 - (IBAction)encipher:(id)sender;
 - (IBAction)decipher:(id)sender;
 - (IBAction)send:(id)sender;

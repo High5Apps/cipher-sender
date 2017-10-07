@@ -161,20 +161,9 @@
     [self presentViewController:navcon animated:YES completion:nil];
 }
 
-- (IBAction)showInfo:(id)sender{
-    NSLog(@"Show info");
-//    NSString *flipsideNib;
-//    if ([UIScreen mainScreen].bounds.size.height > 480) {
-//        flipsideNib = @"FlipsideViewController_4in";
-//    }else {
-//        flipsideNib = @"FlipsideViewController";
-//    }
-//    FlipsideViewController *flipsideController = [[FlipsideViewController alloc] initWithNibName:flipsideNib bundle:nil];
-//    flipsideController.advert = self.advert;
-//    flipsideController.bannerIsVisible = self.bannerIsVisible;
-//    flipsideController.delegate = self;
-//    flipsideController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-//    [self presentViewController:flipsideController animated:YES completion:nil];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    FlipsideViewController *flipsideViewController = [[[segue destinationViewController] viewControllers] objectAtIndex:0];
+    flipsideViewController.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -192,6 +181,10 @@
     NSString *selectedCipher = [CipherFactory cipherNames][indexPath.row];
     [self.cipherTypeButton setTitle:selectedCipher forState:UIControlStateNormal];
     self.myCipherType = selectedCipher;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

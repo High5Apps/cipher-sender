@@ -23,7 +23,7 @@
     if (self) {
         // Custom initialization
         self.tableView.backgroundColor = self.backgroundColor;
-        [self.tableView setSeparatorColor:[UIColor colorWithRed:47.0/255 green:47.0/255 blue:47.0/255 alpha:1]];
+        [self.tableView setSeparatorColor:[UIColor colorWithWhite:51.0/255 alpha:1.0]];
     }
     return self;
 }
