@@ -26,6 +26,7 @@
 - (IBAction)done:(id)sender;
 - (IBAction)about:(id)sender;
 - (IBAction)contact:(id)sender;
+- (IBAction)rate:(id)sender;
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error;
 
