@@ -33,7 +33,11 @@
     
     self.myCipherFactory = [[CipherFactory alloc] init];
     self.myCipherType = [CipherFactory cipherNames][savedCipherNumber];
+    
     [self.cipherTypeButton setTitle:self.myCipherType forState:UIControlStateNormal];
+    self.cipherTypeButton.titleLabel.minimumScaleFactor = 0.5f;
+    self.cipherTypeButton.titleLabel.numberOfLines = 2;
+    self.cipherTypeButton.titleLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)addDoneBar{
