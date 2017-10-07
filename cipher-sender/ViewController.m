@@ -151,7 +151,7 @@
 
 - (IBAction)cipherTypePressed:(id)sender{
     CipherPickerTVC *cipherList = [[CipherPickerTVC alloc] initWithStyle:UITableViewStylePlain];
-    cipherList.title = @"Choose a Cipher...";
+    cipherList.title = @"Choose a Cipher";
     cipherList.delegate = self;
     UINavigationController *navcon = [[UINavigationController alloc] initWithRootViewController:cipherList];
     navcon.navigationBar.tintColor = [UIColor blackColor];

@@ -31,8 +31,8 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     //must make Done button here bc in loadView, self.delegate is still nil
-	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
-                                                                                target:self.delegate action:@selector(cipherPickerTVCDidSelectDone:)];
+	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self.delegate action:@selector(cipherPickerTVCDidSelectDone:)];
+    cancelButton.tintColor = [UIColor greenColor];
 	self.navigationItem.leftBarButtonItem = cancelButton;
 }
 
@@ -81,6 +81,8 @@
         cell.textLabel.textColor = self.textColor;
         
         cell.textLabel.font = self.titleFont;
+        
+        self.tableView.separatorInset = UIEdgeInsetsZero;
     }
     
     // Configure the cell...
