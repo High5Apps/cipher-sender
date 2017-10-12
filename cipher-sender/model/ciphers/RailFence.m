@@ -43,7 +43,7 @@
         return ciphertext;
     }
     
-    NSDictionary *railCounts = [self makeRailCountsForTextLength:[textString length] withRailTotal:numRails];
+    NSDictionary *railCounts = [self makeRailCountsForTextLength:(int)[textString length] withRailTotal:numRails];
     int position = 0;
     for (int i = 0; i < numRails; i++) {
         int railCount = [railCounts[@(i)] intValue];

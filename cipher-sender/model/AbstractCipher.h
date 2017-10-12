@@ -14,8 +14,6 @@
     @private NSString *myKey;
 }
 
-//- (BOOL) string: (NSString *)string ContainsChar:(char)target; //remove later
-
 - (NSString *)encrypt:(NSString *)plaintext;
 - (NSString *)decrpyt:(NSString *)ciphertext;
 - (BOOL)setKey:(NSString *)key;
@@ -25,10 +23,5 @@
 - (NSString *)getUnacceptableCipherLetters;
 - (BOOL)needsKey;
 - (NSString *)keyPrompt;
-
-//- (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key;
-//- (Text *)decryptionMethodForCiphertext:(Text *)ciphertext withKey:(NSString *)key;
-//- (BOOL)isAcceptableKey:(NSString *)key;
-
 
 @end

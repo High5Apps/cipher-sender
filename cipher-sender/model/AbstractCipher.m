@@ -32,33 +32,13 @@
 }
 
 - (BOOL)isAcceptablePlaintext:(NSString *)plaintext{
-    const char *badLetters = [[self getUnacceptablePlainLetters] UTF8String];
-    for (int i = 0; i < [[self getUnacceptablePlainLetters] length]; i++) {
-        if ([self string:plaintext ContainsChar:badLetters[i]]) {
-            return NO;
-        }
-    }
-    return YES;
+    NSRange unacceptableRange = [plaintext rangeOfCharacterFromSet:[self getUnacceptablePlaintextCharacterSet]];
+    return unacceptableRange.location == NSNotFound;
 }
 
 - (BOOL)isAcceptableCiphertext:(NSString *)ciphertext{
-    const char *badLetters = [[self getUnacceptableCipherLetters] UTF8String];
-    for (int i = 0; i < [[self getUnacceptableCipherLetters] length]; i++){
-        if ([self string:ciphertext ContainsChar:badLetters[i]]){
-            return NO;
-        }
-    }
-    return YES;
-}
-            
-- (BOOL) string: (NSString *)string ContainsChar:(char)target{
-    const char *letters = [string UTF8String];
-    for (int i = 0; i < [string length]; i++) {
-        if (letters[i] == target) {
-            return YES;
-        }
-    }
-    return NO;
+    NSRange unacceptableRange = [ciphertext rangeOfCharacterFromSet:[self getUnacceptableCiphertextCharacterSet]];
+    return unacceptableRange.location == NSNotFound;
 }
 
 - (NSString *)getUnacceptablePlainLetters{
@@ -69,6 +49,19 @@
     return @"";
 }
 
+- (NSCharacterSet *)getUnacceptablePlaintextCharacterSet{
+    // Only allow ascii characters minus letters specified in getUnacceptablePlainLetters
+    NSMutableCharacterSet *acceptableSet = [NSMutableCharacterSet characterSetWithRange:NSMakeRange(0, 128)];
+    [acceptableSet removeCharactersInString:[self getUnacceptablePlainLetters]];
+    return [acceptableSet invertedSet];
+}
+
+- (NSCharacterSet *)getUnacceptableCiphertextCharacterSet{
+    // Only allow ascii characters minus letters specified in getUnacceptableCipherLetters
+    NSMutableCharacterSet *acceptableSet = [NSMutableCharacterSet characterSetWithRange:NSMakeRange(0, 128)];
+    [acceptableSet removeCharactersInString:[self getUnacceptableCipherLetters]];
+    return [acceptableSet invertedSet];
+}
 
 //Pseudo abstract methods
 - (BOOL) needsKey{return NO;}

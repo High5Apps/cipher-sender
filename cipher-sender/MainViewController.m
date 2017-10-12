@@ -88,7 +88,11 @@
             self.textView.text = ciphertext;
         }
     }else {
-        NSString *message = [NSString stringWithFormat: @"The plaintext may not contain any of the following: %@", ac.getUnacceptablePlainLetters];
+        NSMutableString *message = [NSMutableString stringWithString:@"The plaintext must only contain English ASCII characters"];
+        NSString *unacceptableCharacters = [ac getUnacceptablePlainLetters];
+        if (unacceptableCharacters.length > 0) {
+            [message appendString:[NSString stringWithFormat:@" and must not contain any of the following characters %@", unacceptableCharacters]];
+        }
         [self showUnacceptableInputAlert:message];
     }
     
@@ -108,7 +112,11 @@
             self.textView.text = plaintext;
         }
     }else {
-        NSString *message = [NSString stringWithFormat: @"The ciphertext may not contain any of the following: %@", ac.getUnacceptableCipherLetters];
+        NSMutableString *message = [NSMutableString stringWithString:@"The plaintext must only contain English ASCII characters"];
+        NSString *unacceptableCharacters = [ac getUnacceptableCipherLetters];
+        if (unacceptableCharacters.length > 0) {
+            [message appendString:[NSString stringWithFormat:@" and must not contain any of the following characters %@", unacceptableCharacters]];
+        }
         [self showUnacceptableInputAlert:message];
     }
     

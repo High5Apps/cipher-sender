@@ -38,7 +38,7 @@
 }
 
 - (NSString *)getUnacceptableCipherLetters{
-    return @"qaz";
+    return @"aqz";
 }
 
 @end
