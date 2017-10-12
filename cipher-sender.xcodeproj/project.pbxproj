@@ -169,10 +169,10 @@
 				C2731DFF1F85253200546FF8 /* MainViewController.h */,
 				C2731E001F85253200546FF8 /* MainViewController.m */,
 				C2731E021F85253200546FF8 /* Main.storyboard */,
+				C2731E071F85253200546FF8 /* LaunchScreen.storyboard */,
 				C28EC7E51F864CF200FA6B00 /* model */,
 				C2091D221F85305C00ADC34B /* custom-ui-elements */,
 				C2731E051F85253200546FF8 /* Assets.xcassets */,
-				C2731E071F85253200546FF8 /* LaunchScreen.storyboard */,
 				C2731E0A1F85253200546FF8 /* Info.plist */,
 				C2731E0B1F85253200546FF8 /* main.m */,
 			);
