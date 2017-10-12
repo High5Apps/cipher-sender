@@ -26,6 +26,8 @@
     
     NSDictionary *buttonTextAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"CourierNewPS-BoldMT" size:15], NSForegroundColorAttributeName: [UIColor greenColor]};
     [[UIBarButtonItem appearance] setTitleTextAttributes:buttonTextAttributes forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:buttonTextAttributes forState:UIControlStateHighlighted];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:buttonTextAttributes forState:UIControlStateSelected];
     
     self.viewController = (MainViewController *)self.window.rootViewController;
     
