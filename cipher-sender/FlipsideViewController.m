@@ -20,7 +20,6 @@
 @implementation FlipsideViewController
 
 @synthesize delegate = _delegate;
-@synthesize about, contact;
 
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -86,6 +85,11 @@
 
 - (void)aboutCiphersTVCDidSelectDone:(AboutCiphersTableViewController *)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction {
+    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UIAction" action:@"ButtonPress" label:@"Video" value:nil] build]];
+    return YES;
 }
 
 @end

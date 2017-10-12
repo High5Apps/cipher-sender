@@ -16,12 +16,9 @@
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
 @end
 
-@interface FlipsideViewController : UIViewController<MFMailComposeViewControllerDelegate, AboutCiphersTableViewControllerDelegate>
+@interface FlipsideViewController : UIViewController<MFMailComposeViewControllerDelegate, AboutCiphersTableViewControllerDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) id <FlipsideViewControllerDelegate> delegate;
-
-@property (strong, nonatomic) IBOutlet UIButton *about;
-@property (strong, nonatomic) IBOutlet UIButton *contact;
 
 - (IBAction)done:(id)sender;
 - (IBAction)about:(id)sender;

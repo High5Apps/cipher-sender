@@ -163,7 +163,7 @@
     [self presentViewController:controller animated:YES completion:NULL];
 }
 
-- (IBAction)copyPressed:(id)sender{
+- (void)copyPressed:(id)sender{
     UIPasteboard *clipboard = [UIPasteboard generalPasteboard];
     [clipboard setString:self.textView.text];
     
