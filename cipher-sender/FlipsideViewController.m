@@ -9,9 +9,12 @@
 #import "FlipsideViewController.h"
 #import "AboutCiphersTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <GAI.h>
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
 
 @interface FlipsideViewController ()
-
+@property id<GAITracker> tracker;
 @end
 
 @implementation FlipsideViewController
@@ -19,16 +22,22 @@
 @synthesize delegate = _delegate;
 @synthesize about, contact;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload{
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.tracker = [GAI sharedInstance].defaultTracker;
+    [self.tracker set:kGAIScreenName value:@"FlipsideViewController"];
+    [self.tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 #pragma mark - Actions
@@ -55,6 +64,8 @@
         [controller setToRecipients:@[@"High5Apps@gmail.com"]];
         [self presentViewController:controller animated:YES completion:nil];
     }
+    
+    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UIAction" action:@"ButtonPress" label:@"Email" value:nil] build]];
 }
 
 - (IBAction)rate:(id)sender{
@@ -63,6 +74,8 @@
     static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d";
     NSURL *reviewLink = [NSURL URLWithString:[NSString stringWithFormat:([[UIDevice currentDevice].systemVersion floatValue] >= 7.0f)? iOS7AppStoreURLFormat: iOSAppStoreURLFormat, appStoreId]];
     [[UIApplication sharedApplication] openURL:reviewLink options:@{} completionHandler:NULL];
+    
+    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UIAction" action:@"ButtonPress" label:@"Rate" value:nil] build]];
 }
 
 #pragma mark - Delegate Methods

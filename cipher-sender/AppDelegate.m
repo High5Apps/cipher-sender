@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "MainViewController.h"
+#import <GAI.h>
 
 @interface AppDelegate ()
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) MainViewController *viewController;
 @end
 
 @implementation AppDelegate
@@ -26,7 +27,17 @@
     NSDictionary *buttonTextAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"CourierNewPS-BoldMT" size:15], NSForegroundColorAttributeName: [UIColor greenColor]};
     [[UIBarButtonItem appearance] setTitleTextAttributes:buttonTextAttributes forState:UIControlStateNormal];
     
-    self.viewController = (ViewController *)self.window.rootViewController;
+    self.viewController = (MainViewController *)self.window.rootViewController;
+    
+    GAI *gai = [GAI sharedInstance];
+    [gai trackerWithTrackingId:@"UA-33509143-1"];
+
+    // Optional: automatically report uncaught exceptions.
+    gai.trackUncaughtExceptions = YES;
+
+    // Optional: set Logger to VERBOSE for debug information.
+    // Remove before app release.
+//    gai.logger.logLevel = kGAILogLevelVerbose;
     
     return YES;
 }

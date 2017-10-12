@@ -23,7 +23,7 @@
 - (Text *) decryptionMethodForCiphertext:(Text *) ciphertext withKey: (NSString *)key{
     NSMutableArray *replacements = [[NSMutableArray alloc] initWithCapacity:[Alphabet NUM_LETTERS]];
     for (NSString *letter in [ciphertext getLoweredLettersPlus:self.getUnacceptablePlainLetters]) {
-        int index = [self.myShiftLetters rangeOfString:letter].location;
+        int index = (int)[self.myShiftLetters rangeOfString:letter].location;
         [replacements addObject:[Alphabet getLetter:index]];
     }
     return [ciphertext replaceLettersWith:replacements plus:self.getUnacceptablePlainLetters];

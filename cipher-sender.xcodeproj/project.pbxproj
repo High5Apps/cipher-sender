@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DF98D55173D0F4959F7A5BC /* libPods-cipher-sender.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8225595F8C530E2696D50FAD /* libPods-cipher-sender.a */; };
 		C2091D291F8530C500ADC34B /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2091D231F8530C500ADC34B /* CustomCell.m */; };
 		C2091D2A1F8530C500ADC34B /* CusomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2091D271F8530C500ADC34B /* CusomTextView.m */; };
 		C2091D2B1F8530C500ADC34B /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C2091D281F8530C500ADC34B /* CustomButton.m */; };
 		C2731DFE1F85253200546FF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2731DFD1F85253200546FF8 /* AppDelegate.m */; };
-		C2731E011F85253200546FF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2731E001F85253200546FF8 /* ViewController.m */; };
+		C2731E011F85253200546FF8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2731E001F85253200546FF8 /* MainViewController.m */; };
 		C2731E041F85253200546FF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2731E021F85253200546FF8 /* Main.storyboard */; };
 		C2731E061F85253200546FF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2731E051F85253200546FF8 /* Assets.xcassets */; };
 		C2731E091F85253200546FF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2731E071F85253200546FF8 /* LaunchScreen.storyboard */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8225595F8C530E2696D50FAD /* libPods-cipher-sender.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cipher-sender.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		965B784AB0EA94BF9C8D7AFD /* Pods-cipher-sender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cipher-sender.release.xcconfig"; path = "Pods/Target Support Files/Pods-cipher-sender/Pods-cipher-sender.release.xcconfig"; sourceTree = "<group>"; };
 		C2091D231F8530C500ADC34B /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		C2091D241F8530C500ADC34B /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		C2091D251F8530C500ADC34B /* CusomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CusomTextView.h; sourceTree = "<group>"; };
@@ -46,8 +49,8 @@
 		C2731DF91F85253200546FF8 /* cipher-sender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cipher-sender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2731DFC1F85253200546FF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2731DFD1F85253200546FF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C2731DFF1F85253200546FF8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C2731E001F85253200546FF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C2731DFF1F85253200546FF8 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C2731E001F85253200546FF8 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C2731E031F85253200546FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2731E051F85253200546FF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2731E081F85253200546FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		C2971F741F88F83E00C5B264 /* AboutCiphersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCiphersTableViewController.m; sourceTree = "<group>"; };
 		C2971F751F88F83E00C5B264 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		C2971F761F88F83E00C5B264 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		E096421FC7DF5854FAB34268 /* Pods-cipher-sender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cipher-sender.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cipher-sender/Pods-cipher-sender.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,12 +100,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF98D55173D0F4959F7A5BC /* libPods-cipher-sender.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85FBC7C93436025343F5C851 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E096421FC7DF5854FAB34268 /* Pods-cipher-sender.debug.xcconfig */,
+				965B784AB0EA94BF9C8D7AFD /* Pods-cipher-sender.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB1DC26E3F9C3A0FE2883E67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8225595F8C530E2696D50FAD /* libPods-cipher-sender.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C2091D221F85305C00ADC34B /* custom-ui-elements */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +142,8 @@
 			children = (
 				C2731DFB1F85253200546FF8 /* cipher-sender */,
 				C2731DFA1F85253200546FF8 /* Products */,
+				85FBC7C93436025343F5C851 /* Pods */,
+				BB1DC26E3F9C3A0FE2883E67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,8 +166,8 @@
 				C28EC8161F8655EE00FA6B00 /* CipherPickerTVC.m */,
 				C2971F751F88F83E00C5B264 /* FlipsideViewController.h */,
 				C2971F761F88F83E00C5B264 /* FlipsideViewController.m */,
-				C2731DFF1F85253200546FF8 /* ViewController.h */,
-				C2731E001F85253200546FF8 /* ViewController.m */,
+				C2731DFF1F85253200546FF8 /* MainViewController.h */,
+				C2731E001F85253200546FF8 /* MainViewController.m */,
 				C2731E021F85253200546FF8 /* Main.storyboard */,
 				C28EC7E51F864CF200FA6B00 /* model */,
 				C2091D221F85305C00ADC34B /* custom-ui-elements */,
@@ -215,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2731E0F1F85253200546FF8 /* Build configuration list for PBXNativeTarget "cipher-sender" */;
 			buildPhases = (
+				BE34CBB8C0C5D2EC838DBFB4 /* [CP] Check Pods Manifest.lock */,
 				C2731DF51F85253200546FF8 /* Sources */,
 				C2731DF61F85253200546FF8 /* Frameworks */,
 				C2731DF71F85253200546FF8 /* Resources */,
+				F6816A2DEEC56A597C84FF48 /* [CP] Embed Pods Frameworks */,
+				E4E69672C1F8D8AE776E544A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,6 +301,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BE34CBB8C0C5D2EC838DBFB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cipher-sender-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4E69672C1F8D8AE776E544A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cipher-sender/Pods-cipher-sender-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6816A2DEEC56A597C84FF48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cipher-sender/Pods-cipher-sender-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C2731DF51F85253200546FF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -294,7 +372,7 @@
 				C28EC80E1F864DF300FA6B00 /* LetterNumber.m in Sources */,
 				C28EC80C1F864DF300FA6B00 /* KeyboardCode.m in Sources */,
 				C2971F771F88F83F00C5B264 /* AboutCiphersTableViewController.m in Sources */,
-				C2731E011F85253200546FF8 /* ViewController.m in Sources */,
+				C2731E011F85253200546FF8 /* MainViewController.m in Sources */,
 				C2731E0C1F85253200546FF8 /* main.m in Sources */,
 				C2091D291F8530C500ADC34B /* CustomCell.m in Sources */,
 				C28EC80D1F864DF300FA6B00 /* Vigenere.m in Sources */,
@@ -434,6 +512,7 @@
 		};
 		C2731E101F85253200546FF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E096421FC7DF5854FAB34268 /* Pods-cipher-sender.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +527,7 @@
 		};
 		C2731E111F85253200546FF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 965B784AB0EA94BF9C8D7AFD /* Pods-cipher-sender.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

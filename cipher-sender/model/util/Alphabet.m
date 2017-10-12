@@ -19,7 +19,7 @@
 }
 
 + (int)NUM_LETTERS{
-    return [[self LOWER_LETTERS] length];
+    return (int)[[self LOWER_LETTERS] length];
 }
 
 + (NSArray *)LOWER_ARR{
@@ -63,7 +63,7 @@
 }
 
 + (int)getIndex:(NSString *)letter{
-    return [[self LOWER_ARR] indexOfObject:letter];
+    return (int)[[self LOWER_ARR] indexOfObject:letter];
 }
 
 + (BOOL)isLetter:(char)c{

@@ -8,6 +8,9 @@
 
 #import "AboutCiphersTableViewController.h"
 #import "CipherFactory.h"
+#import <GAI.h>
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
 
 @interface AboutCiphersTableViewController ()
 
@@ -17,8 +20,7 @@
 
 @synthesize delegate;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
+- (id)initWithStyle:(UITableViewStyle)style{
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
@@ -29,8 +31,7 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -45,6 +46,10 @@
     //must make Done button here bc in loadView, self.delegate is still nil
 	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self.delegate action:@selector(aboutCiphersTVCDidSelectDone:)];
 	self.navigationItem.rightBarButtonItem = doneButton;
+    
+    id<GAITracker> tracker = [GAI sharedInstance].defaultTracker;
+    [tracker set:kGAIScreenName value:@"AboutCiphersTableViewController"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 - (void)viewDidUnload
