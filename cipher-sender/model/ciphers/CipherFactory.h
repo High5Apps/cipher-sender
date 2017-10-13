@@ -9,10 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "AbstractCipher.h"
 
-@interface CipherFactory : NSObject{
-@private
-    NSDictionary *myCipherMap;
-}
+@interface CipherFactory : NSObject
 
 + (NSArray *)cipherClasses;
 + (NSArray *)cipherNames;
