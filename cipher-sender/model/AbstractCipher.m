@@ -19,7 +19,7 @@
     return [[self encryptionMethodForPlaintext:[[Text alloc] initWithString:plaintext] withKey:self.myKey] description];
 }
 
-- (NSString *)decrpyt:(NSString *)ciphertext{
+- (NSString *)decrypt:(NSString *)ciphertext{
     return [[self decryptionMethodForCiphertext:[[Text alloc] initWithString:ciphertext] withKey:self.myKey] description];
 }
 

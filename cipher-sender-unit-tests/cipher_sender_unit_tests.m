@@ -45,7 +45,7 @@
     NSString *cipherText = @"zyxwvutsrqponmlkjihgfedcba";
     NSString *expectedPlaintext = @"abcdefghijklmnopqrstuvwxyz";
     Atbash *atbash = [[Atbash alloc] init];
-    NSString *plaintext = [atbash decrpyt:cipherText];
+    NSString *plaintext = [atbash decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlaintext, plaintext);
 }
 
@@ -65,7 +65,7 @@
     NSString *key = @"c";
     CaesarCipher *caesarCipher = [[CaesarCipher alloc] init];
     [caesarCipher setKey:key];
-    NSString *plainText = [caesarCipher decrpyt:cipherText];
+    NSString *plainText = [caesarCipher decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plainText);
 }
 
@@ -81,7 +81,7 @@
     NSString *cipherText = @"snvfrghjokl;,mp[wtdyibecux";
     NSString *expectedPlainText = @"abcdefghijklmnopqrstuvwxyz";
     KeyboardCode *keyboardCode = [[KeyboardCode alloc] init];
-    NSString *plaintext = [keyboardCode decrpyt:cipherText];
+    NSString *plaintext = [keyboardCode decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plaintext);
 }
 
@@ -97,7 +97,7 @@
     NSString *cipherText = @"0102030405060708091011121314151617181920212223242526";
     NSString *expectedPlainText = @"abcdefghijklmnopqrstuvwxyz";
     LetterNumber *letterNumber = [[LetterNumber alloc] init];
-    NSString *plaintext = [letterNumber decrpyt:cipherText];
+    NSString *plaintext = [letterNumber decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plaintext);
 }
 
@@ -117,7 +117,7 @@
     NSString *key = @"midnight";
     Monoalphabetic *monoalphabeticSubstition = [[Monoalphabetic alloc] init];
     [monoalphabeticSubstition setKey:key];
-    NSString *plainText = [monoalphabeticSubstition decrpyt:cipherText];
+    NSString *plainText = [monoalphabeticSubstition decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plainText);
 }
 
@@ -133,7 +133,7 @@
     NSString *cipherText = @".- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --..";
     NSString *expectedPlainText = @"abcdefghijklmnopqrstuvwxyz";
     MorseCode *morseCode = [[MorseCode alloc] init];
-    NSString *plainText = [morseCode decrpyt:cipherText];
+    NSString *plainText = [morseCode decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plainText);
 }
 
@@ -153,7 +153,7 @@
     NSString *key = @"3";
     RailFence *railFence = [[RailFence alloc] init];
     [railFence setKey:key];
-    NSString *plainText = [railFence decrpyt:cipherText];
+    NSString *plainText = [railFence decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plainText);
 }
 
@@ -169,7 +169,7 @@
     NSString *cipherText = @"nopqrstuvwxyzabcdefghijklm";
     NSString *expectedPlainText = @"abcdefghijklmnopqrstuvwxyz";
     Rot13 *rot13 = [[Rot13 alloc] init];
-    NSString *plainText = [rot13 decrpyt:cipherText];
+    NSString *plainText = [rot13 decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plainText);
 }
 
@@ -189,7 +189,7 @@
     NSString *key = @"midnight";
     Vigenere *vignere = [[Vigenere alloc] init];
     [vignere setKey:key];
-    NSString *plainText = [vignere decrpyt:cipherText];
+    NSString *plainText = [vignere decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plainText);
 }
 

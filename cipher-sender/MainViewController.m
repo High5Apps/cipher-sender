@@ -108,7 +108,7 @@
         if (ac.needsKey) {
             [self showAlertForCipher:ac];
         }else {
-            NSString *plaintext = [[ac decrpyt:ciphertext] description];
+            NSString *plaintext = [[ac decrypt:ciphertext] description];
             self.textView.text = plaintext;
         }
     }else {
@@ -148,7 +148,7 @@
                 NSString *ciphertext = [[ac encrypt:self.textView.text] description];
                 self.textView.text = ciphertext;
             }else {
-                NSString *plaintext = [[ac decrpyt:self.textView.text] description];
+                NSString *plaintext = [[ac decrypt:self.textView.text] description];
                 self.textView.text = plaintext;
             }
         }

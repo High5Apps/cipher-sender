@@ -15,7 +15,7 @@
 }
 
 - (NSString *)encrypt:(NSString *)plaintext;
-- (NSString *)decrpyt:(NSString *)ciphertext;
+- (NSString *)decrypt:(NSString *)ciphertext;
 - (BOOL)setKey:(NSString *)key;
 - (BOOL)isAcceptablePlaintext:(NSString *)plaintext;
 - (BOOL)isAcceptableCiphertext:(NSString *)ciphertext;
