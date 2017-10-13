@@ -35,7 +35,18 @@
 		C28EC8171F8655EE00FA6B00 /* CipherPickerTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC8161F8655EE00FA6B00 /* CipherPickerTVC.m */; };
 		C2971F771F88F83F00C5B264 /* AboutCiphersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2971F741F88F83E00C5B264 /* AboutCiphersTableViewController.m */; };
 		C2971F781F88F83F00C5B264 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2971F761F88F83E00C5B264 /* FlipsideViewController.m */; };
+		C2E47A9F1F911B2E0009BFCB /* cipher_sender_unit_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E47A9E1F911B2E0009BFCB /* cipher_sender_unit_tests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2E47AA11F911B2E0009BFCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2731DF11F85253200546FF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2731DF81F85253200546FF8;
+			remoteInfo = "cipher-sender";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8225595F8C530E2696D50FAD /* libPods-cipher-sender.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cipher-sender.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +103,9 @@
 		C2971F741F88F83E00C5B264 /* AboutCiphersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCiphersTableViewController.m; sourceTree = "<group>"; };
 		C2971F751F88F83E00C5B264 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		C2971F761F88F83E00C5B264 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		C2E47A9C1F911B2E0009BFCB /* cipher-sender-unit-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cipher-sender-unit-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E47A9E1F911B2E0009BFCB /* cipher_sender_unit_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cipher_sender_unit_tests.m; sourceTree = "<group>"; };
+		C2E47AA01F911B2E0009BFCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E096421FC7DF5854FAB34268 /* Pods-cipher-sender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cipher-sender.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cipher-sender/Pods-cipher-sender.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +115,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DF98D55173D0F4959F7A5BC /* libPods-cipher-sender.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2E47A991F911B2E0009BFCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				C2731DFB1F85253200546FF8 /* cipher-sender */,
+				C2E47A9D1F911B2E0009BFCB /* cipher-sender-unit-tests */,
 				C2731DFA1F85253200546FF8 /* Products */,
 				85FBC7C93436025343F5C851 /* Pods */,
 				BB1DC26E3F9C3A0FE2883E67 /* Frameworks */,
@@ -151,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				C2731DF91F85253200546FF8 /* cipher-sender.app */,
+				C2E47A9C1F911B2E0009BFCB /* cipher-sender-unit-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +255,15 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		C2E47A9D1F911B2E0009BFCB /* cipher-sender-unit-tests */ = {
+			isa = PBXGroup;
+			children = (
+				C2E47A9E1F911B2E0009BFCB /* cipher_sender_unit_tests.m */,
+				C2E47AA01F911B2E0009BFCB /* Info.plist */,
+			);
+			path = "cipher-sender-unit-tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +287,24 @@
 			productReference = C2731DF91F85253200546FF8 /* cipher-sender.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C2E47A9B1F911B2E0009BFCB /* cipher-sender-unit-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2E47AA31F911B2E0009BFCB /* Build configuration list for PBXNativeTarget "cipher-sender-unit-tests" */;
+			buildPhases = (
+				C2E47A981F911B2E0009BFCB /* Sources */,
+				C2E47A991F911B2E0009BFCB /* Frameworks */,
+				C2E47A9A1F911B2E0009BFCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2E47AA21F911B2E0009BFCB /* PBXTargetDependency */,
+			);
+			name = "cipher-sender-unit-tests";
+			productName = "cipher-sender-unit-tests";
+			productReference = C2E47A9C1F911B2E0009BFCB /* cipher-sender-unit-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,6 +317,11 @@
 					C2731DF81F85253200546FF8 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+					};
+					C2E47A9B1F911B2E0009BFCB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C2731DF81F85253200546FF8;
 					};
 				};
 			};
@@ -284,6 +339,7 @@
 			projectRoot = "";
 			targets = (
 				C2731DF81F85253200546FF8 /* cipher-sender */,
+				C2E47A9B1F911B2E0009BFCB /* cipher-sender-unit-tests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +352,13 @@
 				C2731E091F85253200546FF8 /* LaunchScreen.storyboard in Resources */,
 				C2731E061F85253200546FF8 /* Assets.xcassets in Resources */,
 				C2731E041F85253200546FF8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2E47A9A1F911B2E0009BFCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +447,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2E47A981F911B2E0009BFCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E47A9F1F911B2E0009BFCB /* cipher_sender_unit_tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2E47AA21F911B2E0009BFCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2731DF81F85253200546FF8 /* cipher-sender */;
+			targetProxy = C2E47AA11F911B2E0009BFCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C2731E021F85253200546FF8 /* Main.storyboard */ = {
@@ -540,6 +619,36 @@
 			};
 			name = Release;
 		};
+		C2E47AA41F911B2E0009BFCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6D9WEB32TK;
+				INFOPLIST_FILE = "cipher-sender-unit-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.high5.cipher-sender-unit-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cipher-sender.app/cipher-sender";
+			};
+			name = Debug;
+		};
+		C2E47AA51F911B2E0009BFCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6D9WEB32TK;
+				INFOPLIST_FILE = "cipher-sender-unit-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.high5.cipher-sender-unit-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cipher-sender.app/cipher-sender";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -557,6 +666,15 @@
 			buildConfigurations = (
 				C2731E101F85253200546FF8 /* Debug */,
 				C2731E111F85253200546FF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2E47AA31F911B2E0009BFCB /* Build configuration list for PBXNativeTarget "cipher-sender-unit-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2E47AA41F911B2E0009BFCB /* Debug */,
+				C2E47AA51F911B2E0009BFCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
