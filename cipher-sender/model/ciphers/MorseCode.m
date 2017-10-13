@@ -37,7 +37,11 @@
     @try {
         NSString *sanitizedCipherText = [[ciphertext description] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         NSMutableString *newString = [[NSMutableString alloc] init];
-        for (NSString *word in [sanitizedCipherText componentsSeparatedByString:@"  "]) { //note double space
+        NSArray *words = [sanitizedCipherText componentsSeparatedByString:@"  "]; //note double space
+        if ([[words objectAtIndex:0] length] == 0) { // Empty cipherText so just return it
+            return ciphertext;
+        }
+        for (NSString *word in words) {
             for (NSString *letter in [word componentsSeparatedByString:@" "]) {
                 [newString appendString:[self letterForMorseLetter:letter]];
             }
