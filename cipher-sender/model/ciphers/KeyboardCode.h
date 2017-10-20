@@ -12,7 +12,7 @@
 
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key;
 - (Text *) decryptionMethodForCiphertext:(Text *) ciphertext withKey: (NSString *)key;
-- (NSString *)getUnacceptablePlainLetters;
-- (NSString *)getUnacceptableCipherLetters;
+- (NSString *)getUnacceptableAsciiPlainLetters;
+- (NSString *)getUnacceptableAsciiCipherLetters;
 
 @end

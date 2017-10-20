@@ -22,23 +22,23 @@
 
 - (Text *) decryptionMethodForCiphertext:(Text *) ciphertext withKey: (NSString *)key{
     NSMutableArray *replacements = [[NSMutableArray alloc] initWithCapacity:[Alphabet NUM_LETTERS]];
-    for (NSString *letter in [ciphertext getLoweredLettersPlus:self.getUnacceptablePlainLetters]) {
+    for (NSString *letter in [ciphertext getLoweredLettersPlus:[self getUnacceptableAsciiPlainLetters]]) {
         int index = (int)[self.myShiftLetters rangeOfString:letter].location;
         [replacements addObject:[Alphabet getLetter:index]];
     }
-    return [ciphertext replaceLettersWith:replacements plus:self.getUnacceptablePlainLetters];
+    return [ciphertext replaceLettersWith:replacements plus:[self getUnacceptableAsciiPlainLetters]];
 }
 
 - (NSString *)myShiftLetters{
     return @"snvfrghjokl;,mp[wtdyibecux";
 }
 
-- (NSString *)getUnacceptablePlainLetters{
-    return @"[;,";
+- (NSString *)getUnacceptableAsciiPlainLetters{
+    return [[super getUnacceptableAsciiPlainLetters] stringByAppendingString: @"[;,"];
 }
 
-- (NSString *)getUnacceptableCipherLetters{
-    return @"aqz";
+- (NSString *)getUnacceptableAsciiCipherLetters{
+    return [[super getUnacceptableAsciiCipherLetters] stringByAppendingString: @"aqz"];
 }
 
 @end

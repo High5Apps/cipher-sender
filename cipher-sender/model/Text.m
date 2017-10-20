@@ -19,9 +19,17 @@
     
     self = [super init];
     if (self) {
-        self.myText = string;
+        self.myText = [self sanitizeInput:string];
     }
     return self;
+}
+
+- (NSString *)sanitizeInput:(NSString *)input {
+    input = [input stringByReplacingOccurrencesOfString:@"“" withString:@"\""]; // left double quote
+    input = [input stringByReplacingOccurrencesOfString:@"”" withString:@"\""]; // right double quote
+    input = [input stringByReplacingOccurrencesOfString:@"‘" withString:@"\'"]; // left single quote
+    input = [input stringByReplacingOccurrencesOfString:@"’" withString:@"\'"]; // right single quote
+    return input;
 }
 
 - (Text *)replaceLettersWith:(NSArray *)replacements{

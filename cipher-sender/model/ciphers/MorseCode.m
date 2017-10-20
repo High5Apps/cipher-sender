@@ -88,12 +88,12 @@
 			@".....", @"-....", @"--...", @"---..", @"----."];
 }
 
-- (NSString *)getUnacceptablePlainLetters{
-    return @".-";
+- (NSString *)getUnacceptableAsciiPlainLetters{
+    return [[super getUnacceptableAsciiPlainLetters] stringByAppendingString: @".-"];
 }
 
-- (NSString *)getUnacceptableCipherLetters{
-    return @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+- (NSString *)getUnacceptableAsciiCipherLetters{
+    return [[super getUnacceptableAsciiCipherLetters] stringByAppendingString: @"abcdefghijklmnopqrstuvwxyzABCDEFGHJIJKLMNOPQRSTUVWXYZ"];
 }
 
 @end

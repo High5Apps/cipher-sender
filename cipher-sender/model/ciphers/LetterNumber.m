@@ -28,14 +28,14 @@
 - (Text *) decryptionMethodForCiphertext:(Text *) ciphertext withKey: (NSString *)key{
     @try {
         NSMutableArray *replacements = [[NSMutableArray alloc] initWithCapacity:[Alphabet NUM_LETTERS]];
-        NSArray *loweredLetters = [ciphertext getLoweredLettersPlus:self.getUnacceptablePlainLetters];
+        NSArray *loweredLetters = [ciphertext getLoweredLettersPlus:[self getUnacceptableAsciiPlainLetters]];
         for (int i = 0; i < [loweredLetters count]; i += 2) {
             NSString *numString = [NSString stringWithFormat:@"%@%@", loweredLetters[i], loweredLetters[(i+1)]];
             int number = [numString intValue];
             NSString *letter = [Alphabet getNthLetter:number];
             [replacements addObject:letter];
         }
-        return [ciphertext replaceLettersWith:replacements plus:self.getUnacceptablePlainLetters everyNthLetter:2];
+        return [ciphertext replaceLettersWith:replacements plus:[self getUnacceptableAsciiPlainLetters] everyNthLetter:2];
     }
     @catch (NSException *exception) {
         NSLog(@"in catch");
@@ -48,12 +48,12 @@
     }
 }
 
-- (NSString *)getUnacceptablePlainLetters{
-    return @"0123456789";
+- (NSString *)getUnacceptableAsciiPlainLetters{
+    return [[super getUnacceptableAsciiPlainLetters] stringByAppendingString: @"0123456789"];
 }
 
-- (NSString *)getUnacceptableCipherLetters{
-    return @"abcdefghijklmnopqrstuvwxyzABCDEFGHJIJKLMNOPQRSTUVWXYZ";
+- (NSString *)getUnacceptableAsciiCipherLetters{
+    return [[super getUnacceptableAsciiCipherLetters] stringByAppendingString: @"abcdefghijklmnopqrstuvwxyzABCDEFGHJIJKLMNOPQRSTUVWXYZ"];
 }
 
 @end

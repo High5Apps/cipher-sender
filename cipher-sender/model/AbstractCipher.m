@@ -41,25 +41,35 @@
     return unacceptableRange.location == NSNotFound;
 }
 
-- (NSString *)getUnacceptablePlainLetters{
+- (NSString *)getUnacceptableAsciiPlainLetters{
     return @"";
 }
 
-- (NSString *)getUnacceptableCipherLetters{
+- (NSString *)getUnacceptableAsciiCipherLetters{
     return @"";
+}
+
+- (NSString *)getAcceptableNonAsciiPlainLetters{
+    return @"“”‘’";
+}
+
+- (NSString *)getAcceptableNonAsciiCipherLetters{
+    return @"“”‘’";
 }
 
 - (NSCharacterSet *)getUnacceptablePlaintextCharacterSet{
-    // Only allow ascii characters minus letters specified in getUnacceptablePlainLetters
+    // Only allow ascii characters plus getAcceptableNonAsciiPlainLetters minus getUnacceptableAsciiPlainLetters
     NSMutableCharacterSet *acceptableSet = [NSMutableCharacterSet characterSetWithRange:NSMakeRange(0, 128)];
-    [acceptableSet removeCharactersInString:[self getUnacceptablePlainLetters]];
+    [acceptableSet addCharactersInString:[self getAcceptableNonAsciiPlainLetters]];
+    [acceptableSet removeCharactersInString:[self getUnacceptableAsciiPlainLetters]];
     return [acceptableSet invertedSet];
 }
 
 - (NSCharacterSet *)getUnacceptableCiphertextCharacterSet{
-    // Only allow ascii characters minus letters specified in getUnacceptableCipherLetters
+    // Only allow ascii characters plus getAcceptableNonAsciiCipherLetters minus getUnacceptableAsciiCipherLetters
     NSMutableCharacterSet *acceptableSet = [NSMutableCharacterSet characterSetWithRange:NSMakeRange(0, 128)];
-    [acceptableSet removeCharactersInString:[self getUnacceptableCipherLetters]];
+    [acceptableSet addCharactersInString:[self getAcceptableNonAsciiCipherLetters]];
+    [acceptableSet removeCharactersInString:[self getUnacceptableAsciiCipherLetters]];
     return [acceptableSet invertedSet];
 }
 

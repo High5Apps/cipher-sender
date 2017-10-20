@@ -89,7 +89,7 @@
         }
     }else {
         NSMutableString *message = [NSMutableString stringWithString:@"The plaintext must only contain English ASCII characters"];
-        NSString *unacceptableCharacters = [ac getUnacceptablePlainLetters];
+        NSString *unacceptableCharacters = [ac getUnacceptableAsciiPlainLetters];
         if (unacceptableCharacters.length > 0) {
             [message appendString:[NSString stringWithFormat:@" and must not contain any of the following characters %@", unacceptableCharacters]];
         }
@@ -113,7 +113,7 @@
         }
     }else {
         NSMutableString *message = [NSMutableString stringWithString:@"The plaintext must only contain English ASCII characters"];
-        NSString *unacceptableCharacters = [ac getUnacceptableCipherLetters];
+        NSString *unacceptableCharacters = [ac getUnacceptableAsciiCipherLetters];
         if (unacceptableCharacters.length > 0) {
             [message appendString:[NSString stringWithFormat:@" and must not contain any of the following characters %@", unacceptableCharacters]];
         }

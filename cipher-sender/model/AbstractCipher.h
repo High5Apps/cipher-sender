@@ -19,8 +19,10 @@
 - (BOOL)setKey:(NSString *)key;
 - (BOOL)isAcceptablePlaintext:(NSString *)plaintext;
 - (BOOL)isAcceptableCiphertext:(NSString *)ciphertext;
-- (NSString *)getUnacceptablePlainLetters;
-- (NSString *)getUnacceptableCipherLetters;
+- (NSString *)getUnacceptableAsciiPlainLetters;
+- (NSString *)getUnacceptableAsciiCipherLetters;
+- (NSString *)getAcceptableNonAsciiPlainLetters;
+- (NSString *)getAcceptableNonAsciiCipherLetters;
 - (BOOL)needsKey;
 - (NSString *)keyPrompt;
 
