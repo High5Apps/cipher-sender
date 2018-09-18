@@ -52,13 +52,6 @@
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (UIFont *)textFont{
     return [UIFont fontWithName:@"Courier" size:15.0];
 }
@@ -75,8 +68,7 @@
     return [UIColor greenColor];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotate{
     return YES;
 }
 

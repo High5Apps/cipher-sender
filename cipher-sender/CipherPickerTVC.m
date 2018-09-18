@@ -36,8 +36,7 @@
 	self.navigationItem.leftBarButtonItem = cancelButton;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotate {
     return YES;
 }
 
