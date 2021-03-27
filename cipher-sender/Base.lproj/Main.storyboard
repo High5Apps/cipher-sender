@@ -37,7 +37,7 @@
                                 <rect key="frame" x="16" y="65.5" width="343" height="585.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Cipher text here..." textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="REQ-Cz-otY" customClass="CusomTextView">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="134"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="200" id="kiI-jT-xOK"/>
@@ -47,7 +47,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="B5d-uC-kq7">
-                                        <rect key="frame" x="0.0" y="216" width="343" height="50"/>
+                                        <rect key="frame" x="0.0" y="150" width="343" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owl-uJ-WsD" customClass="CustomButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="257" height="50"/>
@@ -74,9 +74,33 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" verticalHuggingPriority="1" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="ScW-Vj-GVl" userLabel="spacer">
-                                        <rect key="frame" x="0.0" y="282" width="343" height="171.5"/>
+                                        <rect key="frame" x="0.0" y="216" width="343" height="171.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-ax-vjI">
+                                        <rect key="frame" x="0.0" y="403.5" width="343" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqG-zW-gNY" customClass="CustomButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Copy"/>
+                                                <connections>
+                                                    <action selector="copyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sl-jM-Nve"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utr-o9-Sam" customClass="CustomButton">
+                                                <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Paste"/>
+                                                <connections>
+                                                    <action selector="pastePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dcr-bf-tlv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Fb5-7N-sV7"/>
+                                        </constraints>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GiX-dE-2F8">
                                         <rect key="frame" x="0.0" y="469.5" width="343" height="50"/>
                                         <subviews>
@@ -101,23 +125,15 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="L5V-mw-M7W"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-QY-wB9">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-QY-wB9">
                                         <rect key="frame" x="0.0" y="535.5" width="343" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqB-Uc-Jc4" customClass="CustomButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                                <rect key="frame" x="90" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <state key="normal" title="Send"/>
+                                                <state key="normal" title="Share"/>
                                                 <connections>
-                                                    <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFT-0h-iQN"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9G-Yf-xtz" customClass="CustomButton">
-                                                <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <state key="normal" title="Paste"/>
-                                                <connections>
-                                                    <action selector="pastePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="01Q-Sm-75Y"/>
+                                                    <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFT-0h-iQN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -129,6 +145,8 @@
                                 <constraints>
                                     <constraint firstItem="B5d-uC-kq7" firstAttribute="height" secondItem="GiX-dE-2F8" secondAttribute="height" id="F0x-ab-kqc"/>
                                     <constraint firstItem="GiX-dE-2F8" firstAttribute="height" secondItem="qlL-QY-wB9" secondAttribute="height" id="Hol-MB-efJ"/>
+                                    <constraint firstItem="WqB-Uc-Jc4" firstAttribute="width" secondItem="3rL-eQ-Dgi" secondAttribute="width" id="fkA-uC-TlC"/>
+                                    <constraint firstItem="GiX-dE-2F8" firstAttribute="height" secondItem="gzD-ax-vjI" secondAttribute="height" id="hjO-GL-UFa"/>
                                 </constraints>
                             </stackView>
                         </subviews>

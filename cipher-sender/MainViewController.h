@@ -18,7 +18,8 @@
 
 - (IBAction)encipher:(id)sender;
 - (IBAction)decipher:(id)sender;
-- (IBAction)send:(id)sender;
+- (IBAction)share:(id)sender;
+- (IBAction)copyPressed:(id)sender;
 - (IBAction)pastePressed:(id)sender;
 - (IBAction)clear:(id)sender;
 - (IBAction)cipherTypePressed:(id)sender;

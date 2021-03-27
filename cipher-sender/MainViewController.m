@@ -132,7 +132,7 @@
     [self presentViewController:keyAlert animated:YES completion:NULL];
 }
 
-- (IBAction)send:(id)sender{
+- (IBAction)share:(id)sender{
     NSString *text = self.textView.text;
     NSArray *items = @[text];
     UIActivityViewController *controller = [[UIActivityViewController alloc]initWithActivityItems:items applicationActivities:nil];
@@ -145,7 +145,7 @@
     [self presentViewController:controller animated:YES completion:NULL];
 }
 
-- (void)copyPressed:(id)sender{
+- (IBAction)copyPressed:(id)sender{
     UIPasteboard *clipboard = [UIPasteboard generalPasteboard];
     [clipboard setString:self.textView.text];
 }
