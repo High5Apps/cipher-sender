@@ -10,8 +10,8 @@
 #import "CipherFactory.h"
 
 @interface MainViewController ()
-@property (strong, nonatomic) CipherFactory *myCipherFactory;
-@property (strong, nonatomic) NSString *myCipherType;
+@property (strong, nonatomic) CipherFactory *cipherFactory;
+@property int cipherIndex;
 @property (nonatomic) BOOL isEnciphering;
 @end
 
@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    int savedCipherNumber = (int)[prefs integerForKey:@"cipherType"];
+    self.cipherIndex = (int)[prefs integerForKey:@"cipherType"];
     NSString *savedText = [prefs valueForKey:@"inputText"];
     if (savedText == nil) {
         savedText = @"Input Cipher Text Here...";
@@ -30,10 +30,9 @@
     self.textView.text = savedText;
     [self addDoneBar];
     
-    self.myCipherFactory = [[CipherFactory alloc] init];
-    self.myCipherType = [CipherFactory cipherNames][savedCipherNumber];
+    self.cipherFactory = [[CipherFactory alloc] init];
     
-    [self.cipherTypeButton setTitle:self.myCipherType forState:UIControlStateNormal];
+    [self.cipherTypeButton setTitle:self.selectedCipherType forState:UIControlStateNormal];
     self.cipherTypeButton.titleLabel.minimumScaleFactor = 0.5f;
     self.cipherTypeButton.titleLabel.numberOfLines = 2;
     self.cipherTypeButton.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -54,8 +53,7 @@
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs synchronize];
     [prefs setValue:self.textView.text forKey:@"inputText"];
-    int cipherNumber = (int)[[CipherFactory cipherNames] indexOfObject:self.myCipherType];
-    [prefs setInteger:cipherNumber forKey:@"cipherType"];
+    [prefs setInteger:self.cipherIndex forKey:@"cipherType"];
 }
 
 - (void)dismissKeyboard{
@@ -64,7 +62,7 @@
 
 - (IBAction)encipher:(id)sender{
     self.isEnciphering = YES;
-    AbstractCipher *ac = [self.myCipherFactory cipherForName:self.myCipherType];
+    AbstractCipher *ac = self.selectedCipher;
     NSString *plaintext = self.textView.text;
     if ([ac isAcceptablePlaintext:plaintext]) {
         if (ac.needsKey) {
@@ -85,7 +83,7 @@
 
 - (IBAction)decipher:(id)sender{
     self.isEnciphering = NO;
-    AbstractCipher *ac = [self.myCipherFactory cipherForName:self.myCipherType];
+    AbstractCipher *ac = self.selectedCipher;
     NSString *ciphertext = self.textView.text;
     if ([ac isAcceptableCiphertext:ciphertext]) {
         if (ac.needsKey) {
@@ -122,7 +120,7 @@
         NSString *unsanitizedKey = keyAlert.textFields.firstObject.text;
         NSString *key = [unsanitizedKey stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         
-        AbstractCipher *ac = [self.myCipherFactory cipherForName:self.myCipherType];
+        AbstractCipher *ac = self.selectedCipher;
         if ([ac setKey:key]) {
             if (self.isEnciphering) {
                 NSString *ciphertext = [[ac encrypt:self.textView.text] description];
@@ -168,6 +166,7 @@
     CipherPickerTVC *cipherList = [[CipherPickerTVC alloc] initWithStyle:UITableViewStylePlain];
     cipherList.title = @"Choose a Cipher";
     cipherList.delegate = self;
+    cipherList.initiallySelectedRow = self.cipherIndex;
     UINavigationController *navcon = [[UINavigationController alloc] initWithRootViewController:cipherList];
     [self presentViewController:navcon animated:YES completion:nil];
 }
@@ -182,6 +181,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark Helpers
+- (NSString *)selectedCipherType {
+    return [CipherFactory cipherNames][self.cipherIndex];
+}
+
+- (AbstractCipher *)selectedCipher {
+    return [self.cipherFactory cipherForName:self.selectedCipherType];
+}
+
 #pragma mark Delegate Methods
 
 - (void)cipherPickerTVCDidSelectDone:(CipherPickerTVC *)sender{
@@ -189,9 +197,8 @@
 }
 
 - (void)cipherPickerTVC: (CipherPickerTVC *)sender didSelectRowAtIndexPath: (NSIndexPath *)indexPath{
-    NSString *selectedCipher = [CipherFactory cipherNames][indexPath.row];
-    [self.cipherTypeButton setTitle:selectedCipher forState:UIControlStateNormal];
-    self.myCipherType = selectedCipher;
+    self.cipherIndex = (int) indexPath.row;
+    [self.cipherTypeButton setTitle:self.selectedCipherType forState:UIControlStateNormal];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

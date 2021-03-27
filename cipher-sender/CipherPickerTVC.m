@@ -15,16 +15,7 @@
 
 @implementation CipherPickerTVC
 @synthesize delegate;
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-        self.tableView.backgroundColor = self.backgroundColor;
-    }
-    return self;
-}
+@synthesize initiallySelectedRow;
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -39,10 +30,6 @@
 
 - (UIFont *)titleFont{
     return [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-}
-
-- (UIColor *)backgroundColor{
-    return [UIColor systemBackgroundColor];
 }
 
 - (UIColor *)textColor{
@@ -69,10 +56,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        cell.contentView.backgroundColor = self.backgroundColor;
-        cell.textLabel.backgroundColor = self.backgroundColor;
         
         cell.textLabel.textColor = self.textColor;
         
@@ -83,6 +66,8 @@
     
     // Configure the cell...
     cell.textLabel.text = [CipherFactory cipherNames][indexPath.row];
+    BOOL isSelectedRow = indexPath.row == self.initiallySelectedRow;
+    cell.accessoryType = isSelectedRow ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
         
     return cell;
 }

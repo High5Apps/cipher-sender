@@ -17,8 +17,10 @@
 
 @interface CipherPickerTVC : UITableViewController{
     id <CipherPickerTVCDelegate> delegate;
+    int initiallySelectedRow;
 }
 
 @property (strong, nonatomic) id <CipherPickerTVCDelegate> delegate;
+@property int initiallySelectedRow;
 
 @end
