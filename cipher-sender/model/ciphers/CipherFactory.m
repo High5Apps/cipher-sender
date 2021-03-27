@@ -23,12 +23,20 @@
 
 @implementation CipherFactory
 
+static NSArray *cipherClasses;
+
++ (int)cipherCount {
+    return (int) CipherFactory.cipherClasses.count;
+}
+
 + (AbstractCipher *)createCipherAtIndex:(int)index {
-    return [[[[CipherFactory cipherClasses] objectAtIndex:index] alloc] init];
+    return [[[CipherFactory.cipherClasses objectAtIndex:index] alloc] init];
 }
 
 + (NSArray *)cipherClasses{
-    return @[[Atbash class],
+    if (cipherClasses == nil) {
+        cipherClasses = @[
+            [Atbash class],
             [CaesarCipher class],
             [KeyboardCode class],
             [LetterNumber class],
@@ -36,7 +44,11 @@
             [MorseCode class],
             [RailFence class],
             [Rot13 class],
-            [Vigenere class]];
+            [Vigenere class],
+        ];
+    }
+    
+    return cipherClasses;
 }
 
 @end
