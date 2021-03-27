@@ -27,7 +27,7 @@
         savedText = @"Input Cipher Text Here...";
     }
     self.textView.text = savedText;
-    [self addDoneBar];
+    [self addKeyboardToolbar];
     
     [self.cipherTypeButton setTitle:self.selectedCipherType forState:UIControlStateNormal];
     self.cipherTypeButton.titleLabel.minimumScaleFactor = 0.5f;
@@ -35,15 +35,31 @@
     self.cipherTypeButton.titleLabel.adjustsFontSizeToFitWidth = YES;
 }
 
-- (void)addDoneBar{
-    UIToolbar *doneBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 33)];
-    UIBarButtonItem *clearBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(clear:)];
-    UIBarButtonItem *copyButton = [[UIBarButtonItem alloc] initWithTitle:@"Copy" style:UIBarButtonItemStylePlain target:self action:@selector(copyPressed:)];
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard)];
-    UIBarButtonItem *flexibleSpaceLeft = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *flexibleSpaceLeft2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    [doneBar setItems:@[clearBarButton, flexibleSpaceLeft, copyButton, flexibleSpaceLeft2, doneButton]];
-    [self.textView setInputAccessoryView:doneBar];
+- (void)addKeyboardToolbar{
+    UIToolbar *keyboardToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
+    [keyboardToolbar sizeToFit];
+    
+    UIWindow *window = [UIApplication.sharedApplication.windows objectAtIndex:0];
+    keyboardToolbar.tintColor = window.tintColor;
+    
+    UIBarButtonItem *encipherButton = [[UIBarButtonItem alloc] initWithTitle:@"Encipher" style:UIBarButtonItemStylePlain target:self action:@selector(encipher:)];
+    UIBarButtonItem *decipherButton = [[UIBarButtonItem alloc] initWithTitle:@"Decipher" style:UIBarButtonItemStylePlain target:self action:@selector(decipher:)];
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(share:)];
+    UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] initWithTitle:@"Dismiss" style:UIBarButtonItemStylePlain target:self action:@selector(dismissKeyboard)];
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    NSArray<UIBarButtonItem *> *items = @[
+        encipherButton,
+        flexibleSpace,
+        decipherButton,
+        flexibleSpace,
+        shareButton,
+        flexibleSpace,
+        dismissButton,
+    ];
+    [keyboardToolbar setItems:items];
+    
+    [self.textView setInputAccessoryView:keyboardToolbar];
 }
 
 - (void)saveUserData{
