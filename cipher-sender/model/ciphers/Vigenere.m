@@ -10,6 +10,8 @@
 
 @implementation Vigenere
 
+static NSString * const NAME = @"Vigenere Cipher";
+
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{
     key = [key lowercaseString];
     NSMutableArray *replacements = [[NSMutableArray alloc] init];
@@ -69,6 +71,10 @@
 
 - (NSString *)keyPrompt{
     return @"Enter a keyword";
+}
+
+- (NSString *)name {
+    return NAME;
 }
 
 @end

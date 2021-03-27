@@ -10,6 +10,8 @@
 
 @implementation Monoalphabetic
 
+static NSString * const NAME = @"Monoalphabetic Substitution";
+
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{
     NSString *processedKey = [self processKey:key];
     NSArray *substitutions = [self makeSubstitutionArrayForProcessedKey:processedKey];
@@ -79,6 +81,10 @@
 
 - (NSString *)keyPrompt{
     return @"Enter a keyword or the 26 letter substitutions without spaces. eg nightwatch or ynlkxbshmiwdpjroqvfeaugtzc";
+}
+
+- (NSString *)name {
+    return NAME;
 }
 
 @end

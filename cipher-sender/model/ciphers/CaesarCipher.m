@@ -10,6 +10,8 @@
 
 @implementation CaesarCipher
 
+static NSString * const NAME = @"Caesar Shift Cipher";
+
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{
     int k = [self processKey:key];
     return [self shiftText:plaintext by:k];
@@ -68,6 +70,10 @@
 
 - (NSString *)keyPrompt{
     return @"Enter a letter or number to rotate by:";
+}
+
+- (NSString *)name {
+    return NAME;
 }
 
 @end

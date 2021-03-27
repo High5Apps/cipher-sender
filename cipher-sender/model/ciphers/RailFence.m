@@ -10,6 +10,8 @@
 
 @implementation RailFence
 
+static NSString * const NAME = @"Rail Fence Cipher";
+
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{
     int numRails = [key intValue];
     NSMutableArray *rails = [[NSMutableArray alloc] initWithCapacity:numRails];
@@ -101,6 +103,10 @@
 - (NSString *)keyPrompt{
     return @"Enter a number of rails between 2 and 100. Note: choosing a number of rails larger than the length of the text will return the original text.";
 
+}
+
+- (NSString *)name {
+    return NAME;
 }
 
 @end

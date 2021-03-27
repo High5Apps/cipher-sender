@@ -25,5 +25,6 @@
 - (NSString *)getAcceptableNonAsciiCipherLetters;
 - (BOOL)needsKey;
 - (NSString *)keyPrompt;
+- (NSString *)name;
 
 @end

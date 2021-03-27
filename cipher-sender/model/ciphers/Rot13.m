@@ -10,6 +10,8 @@
 
 @implementation Rot13
 
+static NSString * const NAME = @"Rot13 Cipher";
+
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{
     return [self rotate:plaintext];
 }
@@ -26,6 +28,10 @@
         [replacements addObject:[Alphabet getLetter:i]];
     }
     return [t replaceLettersWith:replacements];
+}
+
+- (NSString *)name {
+    return NAME;
 }
 
 @end

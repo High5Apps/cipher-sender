@@ -19,23 +19,12 @@
 #import "RailFence.h"
 
 @interface CipherFactory()
-@property (strong, nonatomic) NSDictionary *myCipherMap;
 @end
 
 @implementation CipherFactory
-@synthesize myCipherMap;
 
-- (id)init{
-    
-    self = [super init];
-    if (self) {
-        self.myCipherMap = [NSDictionary dictionaryWithObjects:[CipherFactory cipherClasses] forKeys:[CipherFactory cipherNames]];
-    }
-    return self;
-}
-
-- (AbstractCipher *)cipherForName:(NSString *)cipherName{
-    return [[(self.myCipherMap)[cipherName] alloc] init];
++ (AbstractCipher *)createCipherAtIndex:(int)index {
+    return [[[[CipherFactory cipherClasses] objectAtIndex:index] alloc] init];
 }
 
 + (NSArray *)cipherClasses{
@@ -48,18 +37,6 @@
             [RailFence class],
             [Rot13 class],
             [Vigenere class]];
-}
-
-+ (NSArray *)cipherNames{
-    return @[@"Atbash Cipher",
-            @"Caesar Shift Cipher",
-            @"Keyboard Code",
-            @"Letter-Number Code",
-            @"Monoalphabetic Substitution",
-            @"Morse Code",
-            @"Rail Fence Cipher",
-            @"Rot13 Cipher",
-            @"Vigenere Cipher"];
 }
 
 + (NSArray *)cipherDescriptions{

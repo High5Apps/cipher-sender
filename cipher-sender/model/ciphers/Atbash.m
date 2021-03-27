@@ -10,6 +10,8 @@
 
 @implementation Atbash
 
+static NSString * const NAME = @"Atbash Cipher";
+
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{
     return [self flip:plaintext];
 }
@@ -26,6 +28,10 @@
         [replacements addObject:flipped];
     }
     return [t replaceLettersWith:replacements];
+}
+
+- (NSString *)name {
+    return NAME;
 }
 
 @end

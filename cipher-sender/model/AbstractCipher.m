@@ -79,5 +79,6 @@
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{return nil;}
 - (Text *) decryptionMethodForCiphertext:(Text *) ciphertext withKey: (NSString *)key{return nil;}
 - (BOOL) isAcceptableKey:(NSString *)key{return NO;}
+- (NSString *) name{return @"Cipher Name";}
 
 @end

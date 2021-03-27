@@ -10,6 +10,8 @@
 
 @implementation LetterNumber
 
+static NSString * const NAME = @"Letter-Number Code";
+
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{
     NSMutableArray *replacements = [[NSMutableArray alloc] initWithCapacity:[Alphabet NUM_LETTERS]];
     for (NSString *letter in [plaintext getLoweredLetters]) {
@@ -54,6 +56,10 @@
 
 - (NSString *)getUnacceptableAsciiCipherLetters{
     return [[super getUnacceptableAsciiCipherLetters] stringByAppendingString: @"abcdefghijklmnopqrstuvwxyzABCDEFGHJIJKLMNOPQRSTUVWXYZ"];
+}
+
+- (NSString *)name {
+    return NAME;
 }
 
 @end

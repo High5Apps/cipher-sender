@@ -10,6 +10,8 @@
 
 @implementation KeyboardCode
 
+static NSString * const NAME = @"Keyboard Code";
+
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{
     NSMutableArray *replacements = [[NSMutableArray alloc] initWithCapacity:[Alphabet NUM_LETTERS]];
     for (NSString *letter in [plaintext getLoweredLetters]) {
@@ -39,6 +41,10 @@
 
 - (NSString *)getUnacceptableAsciiCipherLetters{
     return [[super getUnacceptableAsciiCipherLetters] stringByAppendingString: @"aqz"];
+}
+
+- (NSString *)name {
+    return NAME;
 }
 
 @end

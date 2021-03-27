@@ -12,9 +12,7 @@
 @interface CipherFactory : NSObject
 
 + (NSArray *)cipherClasses;
-+ (NSArray *)cipherNames;
 + (NSArray *)cipherDescriptions;
-
--(AbstractCipher *)cipherForName:(NSString *)cipherName;
++ (AbstractCipher *)createCipherAtIndex:(int)index;
 
 @end

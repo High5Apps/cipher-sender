@@ -75,7 +75,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [[CipherFactory cipherNames] count];
+    return [[CipherFactory cipherClasses] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -101,7 +101,8 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text = [CipherFactory cipherNames][indexPath.row];
+    AbstractCipher *cipher = [CipherFactory createCipherAtIndex: (int) indexPath.row];
+    cell.textLabel.text = cipher.name;
     cell.detailTextLabel.text = [CipherFactory cipherDescriptions][indexPath.row];
     
     return cell;

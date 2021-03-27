@@ -10,6 +10,8 @@
 
 @implementation MorseCode
 
+static NSString * const NAME = @"Morse Code";
+
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{
     NSMutableString *newString = [[NSMutableString alloc] init];
     for (NSString *word in [plaintext getLoweredWords]) {
@@ -94,6 +96,10 @@
 
 - (NSString *)getUnacceptableAsciiCipherLetters{
     return [[super getUnacceptableAsciiCipherLetters] stringByAppendingString: @"abcdefghijklmnopqrstuvwxyzABCDEFGHJIJKLMNOPQRSTUVWXYZ"];
+}
+
+- (NSString *)name {
+    return NAME;
 }
 
 @end

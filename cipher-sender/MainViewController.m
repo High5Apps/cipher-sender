@@ -10,7 +10,6 @@
 #import "CipherFactory.h"
 
 @interface MainViewController ()
-@property (strong, nonatomic) CipherFactory *cipherFactory;
 @property int cipherIndex;
 @property (nonatomic) BOOL isEnciphering;
 @end
@@ -29,8 +28,6 @@
     }
     self.textView.text = savedText;
     [self addDoneBar];
-    
-    self.cipherFactory = [[CipherFactory alloc] init];
     
     [self.cipherTypeButton setTitle:self.selectedCipherType forState:UIControlStateNormal];
     self.cipherTypeButton.titleLabel.minimumScaleFactor = 0.5f;
@@ -183,11 +180,11 @@
 
 #pragma mark Helpers
 - (NSString *)selectedCipherType {
-    return [CipherFactory cipherNames][self.cipherIndex];
+    return self.selectedCipher.name;
 }
 
 - (AbstractCipher *)selectedCipher {
-    return [self.cipherFactory cipherForName:self.selectedCipherType];
+    return [CipherFactory createCipherAtIndex:self.cipherIndex];
 }
 
 #pragma mark Delegate Methods
