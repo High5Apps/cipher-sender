@@ -55,7 +55,7 @@
             @"Caesar Shift Cipher",
             @"Keyboard Code",
             @"Letter-Number Code",
-            @"Monoalphabetic Substitution Cipher",
+            @"Monoalphabetic Substitution",
             @"Morse Code",
             @"Rail Fence Cipher",
             @"Rot13 Cipher",
