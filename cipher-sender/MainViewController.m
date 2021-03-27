@@ -23,8 +23,8 @@
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     self.cipherIndex = (int)[prefs integerForKey:@"cipherType"];
     NSString *savedText = [prefs valueForKey:@"inputText"];
-    if (savedText == nil) {
-        savedText = @"Input Cipher Text Here...";
+    if (!savedText.length) {
+        savedText = @"Tap to add your message";
     }
     self.textView.text = savedText;
     [self addKeyboardToolbar];
