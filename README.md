@@ -16,7 +16,7 @@ Cipher Sender includes some of the most popular ciphers and codes from throughou
 9. [Keyboard Shift Cipher](https://www.dcode.fr/keyboard-shift-cipher)
 
 ### Add a new Cipher
-Cipher inputs and outputs are currently limited to ASCII characters.
+Cipher inputs and outputs are currently limited to [ASCII](https://en.wikipedia.org/wiki/ASCII) characters.
 
 1. Add a new subclass of 
 [`AbstractCipher`](https://github.com/High5Apps/cipher-sender/blob/master/cipher-sender/model/AbstractCipher.h), 
@@ -24,3 +24,4 @@ Cipher inputs and outputs are currently limited to ASCII characters.
 [`KeylessCipher`](https://github.com/High5Apps/cipher-sender/blob/master/cipher-sender/model/KeylessCipher.h), 
 under [`cipher-sender/model/ciphers`](https://github.com/High5Apps/cipher-sender/tree/master/cipher-sender/model/ciphers)
 2. Add your new cipher to [`CipherFactory.m`](https://github.com/High5Apps/cipher-sender/blob/master/cipher-sender/model/ciphers/CipherFactory.m)
+3. Add unit tests for your new cipher to [`cipher_sender_unit_tests.m`](https://github.com/High5Apps/cipher-sender/blob/master/cipher-sender-unit-tests/cipher_sender_unit_tests.m)
