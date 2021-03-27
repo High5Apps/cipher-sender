@@ -56,10 +56,6 @@
     return [UIColor systemBackgroundColor];
 }
 
-- (UIColor *)textColor{
-    return [UIColor greenColor];
-}
-
 - (BOOL)shouldAutorotate{
     return YES;
 }
@@ -88,9 +84,6 @@
         cell.contentView.backgroundColor = self.backgroundColor;
         cell.textLabel.backgroundColor = self.backgroundColor;
         cell.detailTextLabel.backgroundColor = self.backgroundColor;
-        
-        cell.textLabel.textColor = self.textColor;
-        cell.detailTextLabel.textColor = self.textColor;
         
         cell.textLabel.font = self.titleFont;
         cell.detailTextLabel.font = self.textFont;

@@ -42,7 +42,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="200" id="kiI-jT-xOK"/>
                                         </constraints>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -195,10 +195,9 @@
                                     <textView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" delaysContentTouches="NO" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftV-5l-Kzj">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="427"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <color key="tintColor" systemColor="linkColor"/>
                                         <string key="text">NONE of these ciphers are considered secure. They can all be cracked instantly with a computer. Only use them for fun or educational purposes. To learn more about truly secure public key cryptography, watch this video:
 https://youtu.be/ZghMPWGXexs</string>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -312,8 +311,8 @@ https://youtu.be/ZghMPWGXexs</string>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

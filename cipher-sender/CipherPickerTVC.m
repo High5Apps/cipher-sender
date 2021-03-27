@@ -31,10 +31,6 @@
     return [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 }
 
-- (UIColor *)textColor{
-    return [UIColor greenColor];
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -54,8 +50,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        
-        cell.textLabel.textColor = self.textColor;
         
         cell.textLabel.font = self.titleFont;
         
