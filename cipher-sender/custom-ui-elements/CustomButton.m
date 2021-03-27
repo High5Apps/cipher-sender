@@ -27,13 +27,14 @@
     [self.layer setBorderWidth:1.0f];
     [self.layer setBorderColor:[[UIColor systemGrayColor] CGColor]];
     
-    [self.titleLabel setAdjustsFontForContentSizeCategory:true];
-}
-
--(CGSize)intrinsicContentSize {
-    CGSize s = [super intrinsicContentSize];
-    s = CGSizeMake(s.width, 44);
-    return s;
+    self.titleEdgeInsets = UIEdgeInsetsMake(8, 8, 8, 8);
+    
+    [self.titleLabel setAdjustsFontForContentSizeCategory:YES];
+    
+    [self.titleLabel setNumberOfLines:1];
+    [self.titleLabel setAdjustsFontSizeToFitWidth:YES];
+    [self.titleLabel setMinimumScaleFactor:0.5];
+    [self.titleLabel setLineBreakMode:NSLineBreakByClipping];
 }
 
 @end

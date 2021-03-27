@@ -30,9 +30,6 @@
     [self addKeyboardToolbar];
     
     [self.cipherTypeButton setTitle:self.selectedCipherType forState:UIControlStateNormal];
-    self.cipherTypeButton.titleLabel.minimumScaleFactor = 0.5f;
-    self.cipherTypeButton.titleLabel.numberOfLines = 2;
-    self.cipherTypeButton.titleLabel.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)addKeyboardToolbar{

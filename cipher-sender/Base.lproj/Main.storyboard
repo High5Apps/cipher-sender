@@ -49,9 +49,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="B5d-uC-kq7">
                                         <rect key="frame" x="0.0" y="150" width="343" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owl-uJ-WsD" customClass="CustomButton">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="owl-uJ-WsD" customClass="CustomButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="257" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Cipher Selector"/>
                                                 <connections>
                                                     <action selector="cipherTypePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAk-FY-1ac"/>
@@ -61,8 +62,9 @@
                                                 <rect key="frame" x="273" y="0.0" width="70" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" priority="250" constant="70" id="pun-rl-7AV"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="pun-rl-7AV"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Clear"/>
                                                 <connections>
                                                     <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDh-aw-aYp"/>
@@ -83,6 +85,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqG-zW-gNY" customClass="CustomButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Copy"/>
                                                 <connections>
                                                     <action selector="copyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sl-jM-Nve"/>
@@ -91,6 +94,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Utr-o9-Sam" customClass="CustomButton">
                                                 <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Paste"/>
                                                 <connections>
                                                     <action selector="pastePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dcr-bf-tlv"/>
@@ -107,6 +111,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rL-eQ-Dgi" customClass="CustomButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Encipher"/>
                                                 <connections>
                                                     <action selector="encipher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dC-9O-i3A"/>
@@ -115,6 +120,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yx9-cv-aMW" customClass="CustomButton">
                                                 <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Decipher"/>
                                                 <connections>
                                                     <action selector="decipher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lBf-bF-3S6"/>
@@ -131,6 +137,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqB-Uc-Jc4" customClass="CustomButton">
                                                 <rect key="frame" x="90" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Share"/>
                                                 <connections>
                                                     <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFT-0h-iQN"/>
@@ -205,6 +212,7 @@ https://youtu.be/ZghMPWGXexs</string>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="bjY-wL-2qz"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <state key="normal" title="Cipher Info"/>
                                         <connections>
                                             <action selector="about:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="nav-mP-Sj4"/>
@@ -216,6 +224,7 @@ https://youtu.be/ZghMPWGXexs</string>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="msA-jO-Ccp"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <state key="normal" title="Contact Us"/>
                                         <connections>
                                             <action selector="contact:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="d4f-Lg-8ci"/>
@@ -227,6 +236,7 @@ https://youtu.be/ZghMPWGXexs</string>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="PAl-HI-Ow2"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <state key="normal" title="Rate on the App Store"/>
                                         <connections>
                                             <action selector="rate:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="Si5-Co-Ppm"/>
