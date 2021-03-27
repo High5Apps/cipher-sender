@@ -30,7 +30,6 @@
     aboutVC.title = @"Cipher Info";
     aboutVC.delegate = self;
     UINavigationController *navCon = [[UINavigationController alloc] init];    
-    navCon.navigationBar.tintColor = [UIColor blackColor];
     [navCon pushViewController:aboutVC animated:NO];
     [self presentViewController:navCon animated:YES completion:nil];
 }

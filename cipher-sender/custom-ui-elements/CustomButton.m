@@ -29,17 +29,16 @@
     self.gradientLayer = [[CAGradientLayer alloc] init];
     [self.gradientLayer setBounds:self.bounds];
     [self.gradientLayer setPosition:CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2)];
-    [self.gradientLayer setColors:@[(id)[[UIColor greenColor] CGColor], (id)[[UIColor blackColor] CGColor]]];
+    [self.gradientLayer setColors:@[(id)[[UIColor greenColor] CGColor], (id)[[UIColor systemBackgroundColor] CGColor]]];
     self.gradientLayer.hidden = YES;
     [self.layer insertSublayer:gradientLayer atIndex:0];
     [self.layer setMasksToBounds:YES];
     
-    [self.layer setBackgroundColor:[[UIColor blackColor]CGColor]];
     [self.layer setCornerRadius:5.0f];
     [self.layer setBorderWidth:1.0f];
-    float grayscale = 192.0/255;
-    [self.layer setBorderColor:[[UIColor colorWithRed:grayscale green:grayscale blue:grayscale alpha:1]CGColor]];
-
+    [self.layer setBorderColor:[[UIColor systemGrayColor] CGColor]];
+    
+    [self.titleLabel setAdjustsFontForContentSizeCategory:true];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{

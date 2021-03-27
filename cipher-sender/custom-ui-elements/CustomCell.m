@@ -19,11 +19,10 @@
         self.gradientLayer = [[CAGradientLayer alloc] init];
         [self.gradientLayer setBounds:self.bounds];
         [self.gradientLayer setPosition:CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2)];
-        [self.gradientLayer setColors:@[(id)[[UIColor greenColor] CGColor], (id)[[UIColor blackColor] CGColor]]];
+        [self.gradientLayer setColors:@[(id)[[UIColor greenColor] CGColor], (id)[[UIColor systemBackgroundColor] CGColor]]];
         self.gradientLayer.hidden = YES;
         [self.contentView.layer insertSublayer:gradientLayer atIndex:0];
-        [self.contentView.layer setMasksToBounds:YES];
-
+        [self.contentView.layer setMasksToBounds:YES];        
     }
     return self;
 }

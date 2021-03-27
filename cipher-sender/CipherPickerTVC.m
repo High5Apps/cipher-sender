@@ -23,7 +23,6 @@
     if (self) {
         // Custom initialization
         self.tableView.backgroundColor = self.backgroundColor;
-        [self.tableView setSeparatorColor:[UIColor colorWithWhite:51.0/255 alpha:1.0]];
     }
     return self;
 }
@@ -32,8 +31,7 @@
     [super viewWillAppear:animated];
     //must make Done button here bc in loadView, self.delegate is still nil
 	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self.delegate action:@selector(cipherPickerTVCDidSelectDone:)];
-    cancelButton.tintColor = [UIColor greenColor];
-	self.navigationItem.leftBarButtonItem = cancelButton;
+	self.navigationItem.rightBarButtonItem = cancelButton;
 }
 
 - (BOOL)shouldAutorotate {
@@ -41,11 +39,11 @@
 }
 
 - (UIFont *)titleFont{
-    return [UIFont fontWithName:@"Courier" size:20.0];
+    return [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 }
 
 - (UIColor *)backgroundColor{
-    return [UIColor blackColor];
+    return [UIColor systemBackgroundColor];
 }
 
 - (UIColor *)textColor{

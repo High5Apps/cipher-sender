@@ -41,7 +41,6 @@
 
 - (void)addDoneBar{
     UIToolbar *doneBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 33)];
-    doneBar.barStyle = UIBarStyleBlackTranslucent;
     UIBarButtonItem *clearBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(clear:)];
     UIBarButtonItem *copyButton = [[UIBarButtonItem alloc] initWithTitle:@"Copy" style:UIBarButtonItemStylePlain target:self action:@selector(copyPressed:)];
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard)];
@@ -170,7 +169,6 @@
     cipherList.title = @"Choose a Cipher";
     cipherList.delegate = self;
     UINavigationController *navcon = [[UINavigationController alloc] initWithRootViewController:cipherList];
-    navcon.navigationBar.tintColor = [UIColor blackColor];
     [self presentViewController:navcon animated:YES completion:nil];
 }
 

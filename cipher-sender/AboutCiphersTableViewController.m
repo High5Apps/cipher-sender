@@ -23,7 +23,6 @@
         // Custom initialization
         
         self.tableView.backgroundColor = self.backgroundColor;
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return self;
 }
@@ -46,15 +45,15 @@
 }
 
 - (UIFont *)textFont{
-    return [UIFont fontWithName:@"Courier" size:15.0];
+    return [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 }
 
 - (UIFont *)titleFont{
-    return [UIFont fontWithName:@"Courier" size:20.0];
+    return [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
 }
 
 - (UIColor *)backgroundColor{
-    return [UIColor blackColor];
+    return [UIColor systemBackgroundColor];
 }
 
 - (UIColor *)textColor{
