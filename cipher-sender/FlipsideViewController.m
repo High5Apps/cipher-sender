@@ -45,10 +45,7 @@
 }
 
 - (IBAction)rate:(id)sender{
-    int appStoreId = 548958077;
-    static NSString *const iOS7AppStoreURLFormat = @"itms-apps://itunes.apple.com/app/id%d";
-    static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d";
-    NSURL *reviewLink = [NSURL URLWithString:[NSString stringWithFormat:([[UIDevice currentDevice].systemVersion floatValue] >= 7.0f)? iOS7AppStoreURLFormat: iOSAppStoreURLFormat, appStoreId]];
+    NSURL *reviewLink = [NSURL URLWithString:@"https://apps.apple.com/app/id548958077?action=write-review"];
     [[UIApplication sharedApplication] openURL:reviewLink options:@{} completionHandler:NULL];
 }
 
