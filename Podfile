@@ -6,6 +6,5 @@ target 'cipher-sender' do
   # use_frameworks!
 
   # Pods for cipher-sender
-  pod 'GoogleAnalytics'
 
 end

@@ -8,16 +8,11 @@
 
 #import "MainViewController.h"
 #import "CipherFactory.h"
-#import <GAI.h>
-#import "GAIDictionaryBuilder.h"
-#import "GAIFields.h"
-
 
 @interface MainViewController ()
 @property (strong, nonatomic) CipherFactory *myCipherFactory;
 @property (strong, nonatomic) NSString *myCipherType;
 @property (nonatomic) BOOL isEnciphering;
-@property id<GAITracker> tracker;
 @end
 
 @implementation MainViewController
@@ -42,14 +37,6 @@
     self.cipherTypeButton.titleLabel.minimumScaleFactor = 0.5f;
     self.cipherTypeButton.titleLabel.numberOfLines = 2;
     self.cipherTypeButton.titleLabel.adjustsFontSizeToFitWidth = YES;
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    self.tracker = [GAI sharedInstance].defaultTracker;
-    [self.tracker set:kGAIScreenName value:@"MainViewController"];
-    [self.tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 - (void)addDoneBar{
@@ -95,9 +82,6 @@
         }
         [self showUnacceptableInputAlert:message];
     }
-    
-    [self.tracker set:[GAIFields customDimensionForIndex:1] value:self.myCipherType];
-    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UIAction" action:@"ButtonPress" label:@"Encipher" value:nil] build]];
 }
 
 - (IBAction)decipher:(id)sender{
@@ -119,9 +103,6 @@
         }
         [self showUnacceptableInputAlert:message];
     }
-    
-    [self.tracker set:[GAIFields customDimensionForIndex:1] value:self.myCipherType];
-    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UIAction" action:@"ButtonPress" label:@"Decipher" value:nil] build]];
 }
 
 - (void)showUnacceptableInputAlert:(NSString *)message{
@@ -166,7 +147,6 @@
         if (completed) {
             value = @1;
         }
-        [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UIAction" action:@"Send" label:activityType value:value] build]];
     }];
     [self presentViewController:controller animated:YES completion:NULL];
 }
@@ -174,21 +154,15 @@
 - (void)copyPressed:(id)sender{
     UIPasteboard *clipboard = [UIPasteboard generalPasteboard];
     [clipboard setString:self.textView.text];
-    
-    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UIAction" action:@"ButtonPress" label:@"Copy" value:nil] build]];
 }
 
 - (IBAction)pastePressed:(id)sender{
     UIPasteboard *clipboard = [UIPasteboard generalPasteboard];
     self.textView.text = [clipboard string];
-    
-    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UIAction" action:@"ButtonPress" label:@"Paste" value:nil] build]];
 }
 
 - (IBAction)clear:(id)sender{
     self.textView.text = @"";
-    
-    [self.tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UIAction" action:@"ButtonPress" label:@"Clear" value:nil] build]];
 }
 
 - (IBAction)cipherTypePressed:(id)sender{

@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import <GAI.h>
 
 @interface AppDelegate ()
 @property (strong, nonatomic) MainViewController *viewController;
@@ -30,16 +29,6 @@
     [[UIBarButtonItem appearance] setTitleTextAttributes:buttonTextAttributes forState:UIControlStateSelected];
     
     self.viewController = (MainViewController *)self.window.rootViewController;
-    
-    GAI *gai = [GAI sharedInstance];
-    [gai trackerWithTrackingId:@"UA-33509143-1"];
-
-    // Optional: automatically report uncaught exceptions.
-    gai.trackUncaughtExceptions = YES;
-
-    // Optional: set Logger to VERBOSE for debug information.
-    // Remove before app release.
-//    gai.logger.logLevel = kGAILogLevelVerbose;
     
     return YES;
 }
