@@ -49,27 +49,21 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="B5d-uC-kq7">
                                         <rect key="frame" x="0.0" y="216" width="343" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owl-uJ-WsD" customClass="CustomButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owl-uJ-WsD" customClass="CustomButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="257" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Cipher Selector">
-                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
+                                                <state key="normal" title="Cipher Selector"/>
                                                 <connections>
                                                     <action selector="cipherTypePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAk-FY-1ac"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzJ-SU-2zj" customClass="CustomButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzJ-SU-2zj" customClass="CustomButton">
                                                 <rect key="frame" x="273" y="0.0" width="70" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="70" id="pun-rl-7AV"/>
+                                                    <constraint firstAttribute="width" priority="250" constant="70" id="pun-rl-7AV"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Clear">
-                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
+                                                <state key="normal" title="Clear"/>
                                                 <connections>
                                                     <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDh-aw-aYp"/>
                                                 </connections>
@@ -86,24 +80,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GiX-dE-2F8">
                                         <rect key="frame" x="0.0" y="469.5" width="343" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rL-eQ-Dgi" customClass="CustomButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rL-eQ-Dgi" customClass="CustomButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Encipher">
-                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
+                                                <state key="normal" title="Encipher"/>
                                                 <connections>
                                                     <action selector="encipher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dC-9O-i3A"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yx9-cv-aMW" customClass="CustomButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yx9-cv-aMW" customClass="CustomButton">
                                                 <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Decipher">
-                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
+                                                <state key="normal" title="Decipher"/>
                                                 <connections>
                                                     <action selector="decipher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lBf-bF-3S6"/>
                                                 </connections>
@@ -116,24 +104,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-QY-wB9">
                                         <rect key="frame" x="0.0" y="535.5" width="343" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqB-Uc-Jc4" customClass="CustomButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqB-Uc-Jc4" customClass="CustomButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Send">
-                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
+                                                <state key="normal" title="Send"/>
                                                 <connections>
                                                     <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFT-0h-iQN"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9G-Yf-xtz" customClass="CustomButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9G-Yf-xtz" customClass="CustomButton">
                                                 <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Paste">
-                                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
+                                                <state key="normal" title="Paste"/>
                                                 <connections>
                                                     <action selector="pastePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="01Q-Sm-75Y"/>
                                                 </connections>
@@ -188,6 +170,7 @@
                                     <textView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" delaysContentTouches="NO" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftV-5l-Kzj">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="361"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
                                         <string key="text">NONE of these ciphers are considered secure. They can all be cracked instantly with a computer. Only use them for fun or educational purposes. To learn more about truly secure public key cryptography, watch this video:
 https://youtu.be/ZghMPWGXexs</string>
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -198,44 +181,35 @@ https://youtu.be/ZghMPWGXexs</string>
                                             <outlet property="delegate" destination="CNZ-lQ-1vk" id="dPY-py-Rsw"/>
                                         </connections>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sln-lq-qHA" customClass="CustomButton">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sln-lq-qHA" customClass="CustomButton">
                                         <rect key="frame" x="0.0" y="377" width="343" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="bjY-wL-2qz"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <state key="normal" title="Cipher Info">
-                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Cipher Info"/>
                                         <connections>
                                             <action selector="about:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="nav-mP-Sj4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfL-jS-oxv" customClass="CustomButton">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfL-jS-oxv" customClass="CustomButton">
                                         <rect key="frame" x="0.0" y="443" width="343" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="msA-jO-Ccp"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <state key="normal" title="Contact Us">
-                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Contact Us"/>
                                         <connections>
                                             <action selector="contact:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="d4f-Lg-8ci"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lby-nG-FME" customClass="CustomButton">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lby-nG-FME" customClass="CustomButton">
                                         <rect key="frame" x="0.0" y="509" width="343" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="PAl-HI-Ow2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <state key="normal" title="Rate on the App Store">
-                                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Rate on the App Store"/>
                                         <connections>
                                             <action selector="rate:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="Si5-Co-Ppm"/>
                                         </connections>
@@ -289,6 +263,9 @@ https://youtu.be/ZghMPWGXexs</string>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

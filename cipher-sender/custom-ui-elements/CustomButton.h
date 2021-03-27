@@ -11,6 +11,4 @@
 
 @interface CustomButton : UIButton
 
-@property (strong, nonatomic) CAGradientLayer *gradientLayer;
-
 @end

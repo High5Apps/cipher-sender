@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7DF98D55173D0F4959F7A5BC /* libPods-cipher-sender.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8225595F8C530E2696D50FAD /* libPods-cipher-sender.a */; };
-		C2091D291F8530C500ADC34B /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2091D231F8530C500ADC34B /* CustomCell.m */; };
 		C2091D2A1F8530C500ADC34B /* CusomTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2091D271F8530C500ADC34B /* CusomTextView.m */; };
 		C2091D2B1F8530C500ADC34B /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C2091D281F8530C500ADC34B /* CustomButton.m */; };
 		C2731DFE1F85253200546FF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2731DFD1F85253200546FF8 /* AppDelegate.m */; };
@@ -51,10 +50,8 @@
 /* Begin PBXFileReference section */
 		8225595F8C530E2696D50FAD /* libPods-cipher-sender.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cipher-sender.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		965B784AB0EA94BF9C8D7AFD /* Pods-cipher-sender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cipher-sender.release.xcconfig"; path = "Pods/Target Support Files/Pods-cipher-sender/Pods-cipher-sender.release.xcconfig"; sourceTree = "<group>"; };
-		C2091D231F8530C500ADC34B /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		C2091D241F8530C500ADC34B /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		C2091D251F8530C500ADC34B /* CusomTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CusomTextView.h; sourceTree = "<group>"; };
-		C2091D261F8530C500ADC34B /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		C2091D271F8530C500ADC34B /* CusomTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CusomTextView.m; sourceTree = "<group>"; };
 		C2091D281F8530C500ADC34B /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		C2731DF91F85253200546FF8 /* cipher-sender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cipher-sender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,8 +149,6 @@
 				C2091D271F8530C500ADC34B /* CusomTextView.m */,
 				C2091D241F8530C500ADC34B /* CustomButton.h */,
 				C2091D281F8530C500ADC34B /* CustomButton.m */,
-				C2091D261F8530C500ADC34B /* CustomCell.h */,
-				C2091D231F8530C500ADC34B /* CustomCell.m */,
 			);
 			path = "custom-ui-elements";
 			sourceTree = "<group>";
@@ -405,7 +400,6 @@
 				C2971F771F88F83F00C5B264 /* AboutCiphersTableViewController.m in Sources */,
 				C2731E011F85253200546FF8 /* MainViewController.m in Sources */,
 				C2731E0C1F85253200546FF8 /* main.m in Sources */,
-				C2091D291F8530C500ADC34B /* CustomCell.m in Sources */,
 				C28EC80D1F864DF300FA6B00 /* Vigenere.m in Sources */,
 				C2731DFE1F85253200546FF8 /* AppDelegate.m in Sources */,
 				C28EC7F21F864DDA00FA6B00 /* KeyedCipher.m in Sources */,
