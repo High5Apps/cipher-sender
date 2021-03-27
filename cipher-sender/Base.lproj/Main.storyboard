@@ -193,7 +193,7 @@
                                 <rect key="frame" x="16" y="16" width="343" height="559"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" delaysContentTouches="NO" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ftV-5l-Kzj">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="361"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="427"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" systemColor="linkColor"/>
                                         <string key="text">NONE of these ciphers are considered secure. They can all be cracked instantly with a computer. Only use them for fun or educational purposes. To learn more about truly secure public key cryptography, watch this video:
@@ -206,46 +206,67 @@ https://youtu.be/ZghMPWGXexs</string>
                                             <outlet property="delegate" destination="CNZ-lQ-1vk" id="dPY-py-Rsw"/>
                                         </connections>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sln-lq-qHA" customClass="CustomButton">
-                                        <rect key="frame" x="0.0" y="377" width="343" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="bjY-wL-2qz"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <state key="normal" title="Cipher Info"/>
-                                        <connections>
-                                            <action selector="about:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="nav-mP-Sj4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfL-jS-oxv" customClass="CustomButton">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rEU-KM-9du">
                                         <rect key="frame" x="0.0" y="443" width="343" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="msA-jO-Ccp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <state key="normal" title="Contact Us"/>
-                                        <connections>
-                                            <action selector="contact:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="d4f-Lg-8ci"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lby-nG-FME" customClass="CustomButton">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfL-jS-oxv" customClass="CustomButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="msA-jO-Ccp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <state key="normal" title="Contact Us"/>
+                                                <connections>
+                                                    <action selector="contact:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="d4f-Lg-8ci"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sln-lq-qHA" customClass="CustomButton">
+                                                <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="bjY-wL-2qz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <state key="normal" title="Share the App"/>
+                                                <connections>
+                                                    <action selector="share:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="ee9-hz-bru"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uYF-P3-7bJ">
                                         <rect key="frame" x="0.0" y="509" width="343" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="PAl-HI-Ow2"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <state key="normal" title="Rate on the App Store"/>
-                                        <connections>
-                                            <action selector="rate:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="Si5-Co-Ppm"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6n-wc-F1j" customClass="CustomButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="FF4-To-ZNN"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <state key="normal" title="Cipher Info"/>
+                                                <connections>
+                                                    <action selector="about:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="phB-eF-PXX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lby-nG-FME" customClass="CustomButton">
+                                                <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="PAl-HI-Ow2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <state key="normal" title="Rate the App"/>
+                                                <connections>
+                                                    <action selector="rate:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="Si5-Co-Ppm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Sln-lq-qHA" firstAttribute="height" secondItem="JfL-jS-oxv" secondAttribute="height" id="odS-Wv-oGR"/>
-                                    <constraint firstItem="JfL-jS-oxv" firstAttribute="height" secondItem="lby-nG-FME" secondAttribute="height" id="omx-TY-IU1"/>
+                                    <constraint firstItem="rEU-KM-9du" firstAttribute="height" secondItem="uYF-P3-7bJ" secondAttribute="height" id="vvt-cd-7hc"/>
                                 </constraints>
                             </stackView>
                         </subviews>

@@ -52,6 +52,13 @@
     [[UIApplication sharedApplication] openURL:reviewLink options:@{} completionHandler:NULL];
 }
 
+- (IBAction)share:(id)sender{
+    NSString *text = @"Let's send secret messages! Get Cipher Sender free on the app store: https://apple.co/2PgMzzj";
+    NSArray *items = @[text];
+    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+    [self presentViewController:controller animated:YES completion:NULL];
+}
+
 #pragma mark - Delegate Methods
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error{

@@ -148,13 +148,7 @@
 - (IBAction)share:(id)sender{
     NSString *text = self.textView.text;
     NSArray *items = @[text];
-    UIActivityViewController *controller = [[UIActivityViewController alloc]initWithActivityItems:items applicationActivities:nil];
-    [controller setCompletionWithItemsHandler:^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
-        NSNumber *value = @0;
-        if (completed) {
-            value = @1;
-        }
-    }];
+    UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
     [self presentViewController:controller animated:YES completion:NULL];
 }
 
