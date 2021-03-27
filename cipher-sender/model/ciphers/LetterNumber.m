@@ -11,6 +11,7 @@
 @implementation LetterNumber
 
 static NSString * const NAME = @"Letter-Number Code";
+static NSString * const INFO = @"The Letter-Number Code simply replaces the letter with its two-digit position in the alphabet. 'a' is changed into 01, 'b' to 02, 'c' to 03, etc. For example 'Able' is transformed into 01021205.";
 
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{
     NSMutableArray *replacements = [[NSMutableArray alloc] initWithCapacity:[Alphabet NUM_LETTERS]];
@@ -60,6 +61,10 @@ static NSString * const NAME = @"Letter-Number Code";
 
 - (NSString *)name {
     return NAME;
+}
+
+- (NSString *)info {
+    return INFO;
 }
 
 @end

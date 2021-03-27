@@ -11,6 +11,7 @@
 @implementation Monoalphabetic
 
 static NSString * const NAME = @"Monoalphabetic Substitution";
+static NSString * const INFO = @"Monoalphabetic Substitution switches each letter of the alphabet with another letter of the alphabet. For example, 'a' might be switched with 'h', 'b' with 'x', 'c' with 'm', etc. Some versions of this cipher explicitly specify the switchings for every letter of the alphabet in the key. This means that the key has to be as long as the entire alphabet. However, an easier and shorter way to do this is just to use a keyword: First, duplicated letters are removed from the keyword, and it is placed at the beginning of the alphabet. Then, the rest of the unused letters in the alphabet are placed afterwards. For example, let's use a keyword of 'better'. First remove the duplicates giving 'betr'. Then place it at the beginning of the alphabet and fill in the rest of the unused letters. So if we used 'better' as the keyword, these 26 letter substitutions would be used: 'betracdfghijklmnopqrsuvwxyz'. So 'a' would be switched with 'b', 'b' with 'e', 'c' with 't', 'd' with 'r', etc.";
 
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{
     NSString *processedKey = [self processKey:key];
@@ -85,6 +86,10 @@ static NSString * const NAME = @"Monoalphabetic Substitution";
 
 - (NSString *)name {
     return NAME;
+}
+
+- (NSString *)info {
+    return INFO;
 }
 
 @end

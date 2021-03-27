@@ -11,6 +11,7 @@
 @implementation Rot13
 
 static NSString * const NAME = @"Rot13 Cipher";
+static NSString * const INFO = @"The ROT13 Cipher is a speciallized case of the Caesar Shift Cipher with a shift value of 13. The ROT13 Cipher has gained popularity, especially in online communities, because enciphering and deciphering can be performed using the same simple process.";
 
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{
     return [self rotate:plaintext];
@@ -32,6 +33,10 @@ static NSString * const NAME = @"Rot13 Cipher";
 
 - (NSString *)name {
     return NAME;
+}
+
+- (NSString *)info {
+    return INFO;
 }
 
 @end

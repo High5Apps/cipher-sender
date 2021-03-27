@@ -26,5 +26,6 @@
 - (BOOL)needsKey;
 - (NSString *)keyPrompt;
 - (NSString *)name;
+- (NSString *)info;
 
 @end

@@ -103,7 +103,7 @@
     // Configure the cell...
     AbstractCipher *cipher = [CipherFactory createCipherAtIndex: (int) indexPath.row];
     cell.textLabel.text = cipher.name;
-    cell.detailTextLabel.text = [CipherFactory cipherDescriptions][indexPath.row];
+    cell.detailTextLabel.text = cipher.info;
     
     return cell;
 }

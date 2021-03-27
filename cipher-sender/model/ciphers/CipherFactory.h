@@ -12,7 +12,6 @@
 @interface CipherFactory : NSObject
 
 + (NSArray *)cipherClasses;
-+ (NSArray *)cipherDescriptions;
 + (AbstractCipher *)createCipherAtIndex:(int)index;
 
 @end

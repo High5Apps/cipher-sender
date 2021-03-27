@@ -11,6 +11,7 @@
 @implementation Atbash
 
 static NSString * const NAME = @"Atbash Cipher";
+static NSString * const INFO = @"The Atbash Cipher simply flips the letters of the alphabet. 'a' swaps with 'z', 'b' with 'y', 'c' with 'x', and so on.";
 
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{
     return [self flip:plaintext];
@@ -32,6 +33,10 @@ static NSString * const NAME = @"Atbash Cipher";
 
 - (NSString *)name {
     return NAME;
+}
+
+- (NSString *)info {
+    return INFO;
 }
 
 @end

@@ -11,6 +11,7 @@
 @implementation MorseCode
 
 static NSString * const NAME = @"Morse Code";
+static NSString * const INFO = @"International Morse Code was invented more than 150 years ago by Samuel Morse. It was originally used to send messages across telegraph wires. The code translates the English letters and the numbers 0-9 into a series of dots and dashes with lengths between 1 and 5. Letters that are used more frequently in common language get shorter lengths so that the message may be transmitted quicker. A single space is placed between each letter and a double space is inserted between words.";
 
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{
     NSMutableString *newString = [[NSMutableString alloc] init];
@@ -100,6 +101,10 @@ static NSString * const NAME = @"Morse Code";
 
 - (NSString *)name {
     return NAME;
+}
+
+- (NSString *)info {
+    return INFO;
 }
 
 @end

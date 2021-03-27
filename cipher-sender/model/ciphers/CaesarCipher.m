@@ -11,6 +11,7 @@
 @implementation CaesarCipher
 
 static NSString * const NAME = @"Caesar Shift Cipher";
+static NSString * const INFO = @"This cipher shifts every letter a certain number of letters forward in the alphabet. For example a Caesar Shift of 4 would shift each letter of 'Abe' 4 letters forward giving 'Efi'. Similarly, a shift of 1 would shift each letter of 'Abe' forward 1 giving 'Bcf'. Some implementations use a letter to specify the shift with 'a' corresponding to 1, 'b' to 2, etc. Also note that while it is possible to shift by numbers larger than 25 or smaller than 0, they just wrap around to corresponding shifts between 0 and 25.";
 
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{
     int k = [self processKey:key];
@@ -74,6 +75,10 @@ static NSString * const NAME = @"Caesar Shift Cipher";
 
 - (NSString *)name {
     return NAME;
+}
+
+- (NSString *)info {
+    return INFO;
 }
 
 @end

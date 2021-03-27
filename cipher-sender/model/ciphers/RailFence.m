@@ -11,6 +11,7 @@
 @implementation RailFence
 
 static NSString * const NAME = @"Rail Fence Cipher";
+static NSString * const INFO = @"The Rail Fence Cipher does not switch letters with other letters like most of these ciphers. Instead, it transposes the order of the letters. To accomplish this, the letters are laid out in a zig-zagging fashion. The depth of the zig-zag is given by the number of rails. Traditionally, 3 rails are used. After laying out the letters, the message is recombined by pushing the top rail together and putting it first. Then the second rail is pushed together and put after the first. This process is continued through the last rail. For example, to encode the message 'Hello, Jay' with a rail count of 3, you would first lay out the letters in a zig-zag as follows:\n H...o...a.\n .e.l.,.J.y \n ..l..._... \nThen push together the three lines to get 'Hoael,Jyl_' Note that '_' has been used to emphasize the [space], and '.'s have been added for spacing purposes only.";
 
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{
     int numRails = [key intValue];
@@ -107,6 +108,10 @@ static NSString * const NAME = @"Rail Fence Cipher";
 
 - (NSString *)name {
     return NAME;
+}
+
+- (NSString *)info {
+    return INFO;
 }
 
 @end

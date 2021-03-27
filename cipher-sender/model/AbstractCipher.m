@@ -80,5 +80,6 @@
 - (Text *) decryptionMethodForCiphertext:(Text *) ciphertext withKey: (NSString *)key{return nil;}
 - (BOOL) isAcceptableKey:(NSString *)key{return NO;}
 - (NSString *) name{return @"Cipher Name";}
+- (NSString *) info{return @"Cipher Information";}
 
 @end
