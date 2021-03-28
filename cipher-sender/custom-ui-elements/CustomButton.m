@@ -10,6 +10,7 @@
 
 @implementation CustomButton
 
+static CGFloat const PADDING = 8;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -27,7 +28,9 @@
     [self.layer setBorderWidth:1.0f];
     [self.layer setBorderColor:[[UIColor systemGrayColor] CGColor]];
     
-    self.titleEdgeInsets = UIEdgeInsetsMake(8, 8, 8, 8);
+    BOOL hasImage = (BOOL) self.imageView.image;
+    CGFloat imageTitlePadding = hasImage ? (0.5 * PADDING) : 0;
+    [self updateInsetsForContentPadding:UIEdgeInsetsMake(PADDING, PADDING, PADDING, PADDING) imageTitlePadding:imageTitlePadding];
     
     [self.titleLabel setAdjustsFontForContentSizeCategory:YES];
     
@@ -35,6 +38,11 @@
     [self.titleLabel setAdjustsFontSizeToFitWidth:YES];
     [self.titleLabel setMinimumScaleFactor:0.5];
     [self.titleLabel setLineBreakMode:NSLineBreakByClipping];
+}
+
+- (void) updateInsetsForContentPadding:(UIEdgeInsets)contentPadding imageTitlePadding:(CGFloat)imageTitlePadding {
+    self.contentEdgeInsets = UIEdgeInsetsMake(contentPadding.top, contentPadding.left, contentPadding.bottom, contentPadding.right + imageTitlePadding);
+    self.titleEdgeInsets = UIEdgeInsetsMake(0, imageTitlePadding, 0, -imageTitlePadding);
 }
 
 @end
