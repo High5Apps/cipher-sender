@@ -44,10 +44,10 @@ static NSString * const PLACEHOLDER_TEXT = @"Tap to add your message";
     UIWindow *window = [UIApplication.sharedApplication.windows objectAtIndex:0];
     keyboardToolbar.tintColor = window.tintColor;
     
-    UIBarButtonItem *encipherButton = [[UIBarButtonItem alloc] initWithTitle:@"Encipher" style:UIBarButtonItemStylePlain target:self action:@selector(encipher:)];
-    UIBarButtonItem *decipherButton = [[UIBarButtonItem alloc] initWithTitle:@"Decipher" style:UIBarButtonItemStylePlain target:self action:@selector(decipher:)];
-    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(share:)];
-    UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard)];
+    UIBarButtonItem *encipherButton = [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"lock"] style:UIBarButtonItemStylePlain target:self action:@selector(encipher:)];
+    UIBarButtonItem *decipherButton = [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"lock.open"] style:UIBarButtonItemStylePlain target:self action:@selector(decipher:)];
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"square.and.arrow.up"] style:UIBarButtonItemStylePlain target:self action:@selector(share:)];
+    UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] initWithImage:[UIImage systemImageNamed:@"keyboard.chevron.compact.down"] style:UIBarButtonItemStylePlain target:self action:@selector(dismissKeyboard)];
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     NSArray<UIBarButtonItem *> *items = @[
