@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,7 +51,7 @@
                                         <rect key="frame" x="0.0" y="150" width="343" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="owl-uJ-WsD" customClass="CustomButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="257" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="242" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <state key="normal" title="Cipher Selector"/>
@@ -59,13 +60,15 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzJ-SU-2zj" customClass="CustomButton">
-                                                <rect key="frame" x="273" y="0.0" width="70" height="50"/>
+                                                <rect key="frame" x="258" y="0.0" width="85" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="pun-rl-7AV"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="pun-rl-7AV"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Clear"/>
+                                                <state key="normal" title="Clear">
+                                                    <imageReference key="image" image="trash" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDh-aw-aYp"/>
                                                 </connections>
@@ -86,7 +89,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Copy"/>
+                                                <state key="normal" title="Copy">
+                                                    <imageReference key="image" image="square.on.square" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="copyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sl-jM-Nve"/>
                                                 </connections>
@@ -95,7 +100,9 @@
                                                 <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Paste"/>
+                                                <state key="normal" title="Paste">
+                                                    <imageReference key="image" image="doc.on.clipboard" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="pastePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dcr-bf-tlv"/>
                                                 </connections>
@@ -112,7 +119,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Encipher"/>
+                                                <state key="normal" title="Encipher">
+                                                    <imageReference key="image" image="lock" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="encipher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dC-9O-i3A"/>
                                                 </connections>
@@ -121,7 +130,9 @@
                                                 <rect key="frame" x="179.5" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Decipher"/>
+                                                <state key="normal" title="Decipher">
+                                                    <imageReference key="image" image="lock.open" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="decipher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lBf-bF-3S6"/>
                                                 </connections>
@@ -138,7 +149,9 @@
                                                 <rect key="frame" x="90" y="0.0" width="163.5" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Share"/>
+                                                <state key="normal" title="Share">
+                                                    <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFT-0h-iQN"/>
                                                 </connections>
@@ -216,7 +229,9 @@ https://youtu.be/ZghMPWGXexs</string>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="msA-jO-Ccp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Contact Us"/>
+                                                <state key="normal" title="Contact Us">
+                                                    <imageReference key="image" image="message" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="contact:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="d4f-Lg-8ci"/>
                                                 </connections>
@@ -228,7 +243,9 @@ https://youtu.be/ZghMPWGXexs</string>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="bjY-wL-2qz"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Share the App"/>
+                                                <state key="normal" title="Share App">
+                                                    <imageReference key="image" image="megaphone" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="share:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="ee9-hz-bru"/>
                                                 </connections>
@@ -245,7 +262,9 @@ https://youtu.be/ZghMPWGXexs</string>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="FF4-To-ZNN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Cipher Info"/>
+                                                <state key="normal" title="Cipher Info">
+                                                    <imageReference key="image" image="info.circle" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="about:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="phB-eF-PXX"/>
                                                 </connections>
@@ -257,7 +276,9 @@ https://youtu.be/ZghMPWGXexs</string>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="50" id="PAl-HI-Ow2"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <state key="normal" title="Rate the App"/>
+                                                <state key="normal" title="Rate App">
+                                                    <imageReference key="image" image="star" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="rate:" destination="CNZ-lQ-1vk" eventType="touchUpInside" id="Si5-Co-Ppm"/>
                                                 </connections>
@@ -315,6 +336,16 @@ https://youtu.be/ZghMPWGXexs</string>
         </scene>
     </scenes>
     <resources>
+        <image name="doc.on.clipboard" catalog="system" width="116" height="128"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="lock" catalog="system" width="128" height="128"/>
+        <image name="lock.open" catalog="system" width="128" height="110"/>
+        <image name="megaphone" catalog="system" width="128" height="111"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="square.on.square" catalog="system" width="128" height="113"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
