@@ -30,16 +30,14 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // Removes extra separators from tableview
+    self.tableView.tableFooterView = [UIView new];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //must make Done button here bc in loadView, self.delegate is still nil
+    
+    // Must make Done button here bc in loadView, self.delegate is still nil
 	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self.delegate action:@selector(aboutCiphersTVCDidSelectDone:)];
 	self.navigationItem.rightBarButtonItem = doneButton;
 }

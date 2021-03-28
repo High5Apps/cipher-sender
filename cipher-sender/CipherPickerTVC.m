@@ -16,9 +16,17 @@
 @synthesize delegate;
 @synthesize initiallySelectedRow;
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // Removes extra separators from tableview
+    self.tableView.tableFooterView = [UIView new];
+}
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //must make Done button here bc in loadView, self.delegate is still nil
+    
+    // Must make Done button here bc in loadView, self.delegate is still nil
 	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self.delegate action:@selector(cipherPickerTVCDidSelectDone:)];
 	self.navigationItem.rightBarButtonItem = cancelButton;
 }
