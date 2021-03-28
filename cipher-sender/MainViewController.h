@@ -10,7 +10,7 @@
 #import "CipherPickerTVC.h"
 #import "FlipsideViewController.h"
 
-@interface MainViewController : UIViewController<CipherPickerTVCDelegate, FlipsideViewControllerDelegate>
+@interface MainViewController : UIViewController<CipherPickerTVCDelegate, FlipsideViewControllerDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) IBOutlet UIButton *cipherTypeButton;

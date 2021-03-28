@@ -16,6 +16,8 @@
 
 @implementation MainViewController
 
+static NSString * const PLACEHOLDER_TEXT = @"Tap to add your message";
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -24,8 +26,9 @@
     self.cipherIndex = (int)[prefs integerForKey:@"cipherType"];
     NSString *savedText = [prefs valueForKey:@"inputText"];
     if (!savedText.length) {
-        savedText = @"Tap to add your message";
+        savedText = PLACEHOLDER_TEXT;
     }
+    self.textView.delegate = self;
     self.textView.text = savedText;
     [self addKeyboardToolbar];
     
@@ -211,6 +214,24 @@
 
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark UITextViewDelegate methods
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    if ([textView.text isEqualToString:PLACEHOLDER_TEXT]) {
+        textView.text = nil;
+    }
+    
+    return true;
+}
+
+- (BOOL)textViewShouldEndEditing:(UITextView *)textView {
+    if (!textView.text.length) {
+        textView.text = PLACEHOLDER_TEXT;
+    }
+    
+    return true;
 }
 
 @end
