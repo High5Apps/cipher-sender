@@ -29,6 +29,8 @@
     self.textView.text = savedText;
     [self addKeyboardToolbar];
     
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)]];
+    
     [self.cipherTypeButton setTitle:self.selectedCipherType forState:UIControlStateNormal];
 }
 
@@ -42,7 +44,7 @@
     UIBarButtonItem *encipherButton = [[UIBarButtonItem alloc] initWithTitle:@"Encipher" style:UIBarButtonItemStylePlain target:self action:@selector(encipher:)];
     UIBarButtonItem *decipherButton = [[UIBarButtonItem alloc] initWithTitle:@"Decipher" style:UIBarButtonItemStylePlain target:self action:@selector(decipher:)];
     UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithTitle:@"Share" style:UIBarButtonItemStylePlain target:self action:@selector(share:)];
-    UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] initWithTitle:@"Dismiss" style:UIBarButtonItemStylePlain target:self action:@selector(dismissKeyboard)];
+    UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard)];
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     NSArray<UIBarButtonItem *> *items = @[
