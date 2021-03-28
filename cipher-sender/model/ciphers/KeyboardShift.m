@@ -1,17 +1,17 @@
 //
-//  KeyboardCode.m
+//  KeyboardShift.m
 //  Cipher Sender
 //
 //  Created by Julian Tigler on 6/23/12.
 //  Copyright (c) 2012 Duke. All rights reserved.
 //
 
-#import "KeyboardCode.h"
+#import "KeyboardShift.h"
 
-@implementation KeyboardCode
+@implementation KeyboardShift
 
-static NSString * const NAME = @"Keyboard Code";
-static NSString * const INFO = @"The Keyboard Code is based off of the standard american QWERTY keyboard key arrangements. To encipher, you simply take the key that is one to the right of the desired letter. To decipher, the opposite operation is performed.";
+static NSString * const NAME = @"Keyboard Shift Cipher";
+static NSString * const INFO = @"The Keyboard Shift Cipher is based off of the standard american QWERTY keyboard key arrangements. To encipher, you simply take the key that is one to the right of the desired letter. To decipher, the opposite operation is performed.";
 
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{
     NSMutableArray *replacements = [[NSMutableArray alloc] initWithCapacity:[Alphabet NUM_LETTERS]];

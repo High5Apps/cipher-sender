@@ -1,5 +1,5 @@
 //
-//  KeyboardCode.h
+//  KeyboardShift.h
 //  Cipher Sender
 //
 //  Created by Julian Tigler on 6/23/12.
@@ -8,7 +8,7 @@
 
 #import "KeylessCipher.h"
 
-@interface KeyboardCode : KeylessCipher
+@interface KeyboardShift : KeylessCipher
 
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key;
 - (Text *) decryptionMethodForCiphertext:(Text *) ciphertext withKey: (NSString *)key;

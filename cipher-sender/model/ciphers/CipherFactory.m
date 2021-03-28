@@ -10,7 +10,7 @@
 #import "AbstractCipher.h"
 #import "Atbash.h"
 #import "Rot13.h"
-#import "KeyboardCode.h"
+#import "KeyboardShift.h"
 #import "A1Z26.h"
 #import "MorseCode.h"
 #import "CaesarCipher.h"
@@ -39,7 +39,7 @@ static NSArray *cipherClasses;
             [A1Z26 class],
             [Atbash class],
             [CaesarCipher class],
-            [KeyboardCode class],
+            [KeyboardShift class],
             [Monoalphabetic class],
             [MorseCode class],
             [RailFence class],

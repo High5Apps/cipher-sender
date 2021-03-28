@@ -10,7 +10,7 @@
 #import "A1Z26.h"
 #import "Atbash.h"
 #import "CaesarCipher.h"
-#import "KeyboardCode.h"
+#import "KeyboardShift.h"
 #import "Monoalphabetic.h"
 #import "MorseCode.h"
 #import "RailFence.h"
@@ -85,19 +85,19 @@
     XCTAssertEqualObjects(expectedPlainText, plainText);
 }
 
-- (void)testKeyboardCodeEncrypt {
+- (void)testKeyboardShiftEncrypt {
     NSString *plainText = @"abcdefghijklmnopqrstuvwxyz";
     NSString *expectedCipherText = @"snvfrghjokl;,mp[wtdyibecux";
-    KeyboardCode *keyboardCode = [[KeyboardCode alloc] init];
-    NSString *cipherText = [keyboardCode encrypt:plainText];
+    AbstractCipher *cipher = [[KeyboardShift alloc] init];
+    NSString *cipherText = [cipher encrypt:plainText];
     XCTAssertEqualObjects(expectedCipherText, cipherText);
 }
 
-- (void)testKeyboardCodeDecrypt {
+- (void)testKeyboardShiftDecrypt {
     NSString *cipherText = @"snvfrghjokl;,mp[wtdyibecux";
     NSString *expectedPlainText = @"abcdefghijklmnopqrstuvwxyz";
-    KeyboardCode *keyboardCode = [[KeyboardCode alloc] init];
-    NSString *plaintext = [keyboardCode decrypt:cipherText];
+    AbstractCipher *cipher = [[KeyboardShift alloc] init];
+    NSString *plaintext = [cipher decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plaintext);
 }
 
