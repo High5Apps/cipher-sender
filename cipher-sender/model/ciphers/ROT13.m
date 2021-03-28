@@ -1,16 +1,16 @@
 //
-//  Rot13.m
+//  ROT13.m
 //  Cipher Sender
 //
 //  Created by Julian Tigler on 6/23/12.
 //  Copyright (c) 2012 Duke. All rights reserved.
 //
 
-#import "Rot13.h"
+#import "ROT13.h"
 
-@implementation Rot13
+@implementation ROT13
 
-static NSString * const NAME = @"Rot13 Cipher";
+static NSString * const NAME = @"ROT13 Cipher";
 static NSString * const INFO = @"The ROT13 Cipher is a speciallized case of the Caesar Shift Cipher with a shift value of 13. The ROT13 Cipher has gained popularity, especially in online communities, because enciphering and deciphering can be performed using the same simple process.";
 
 - (Text *)encryptionMethodForPlaintext:(Text *)plaintext withKey:(NSString *)key{

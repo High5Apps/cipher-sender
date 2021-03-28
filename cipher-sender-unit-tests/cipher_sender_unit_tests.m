@@ -14,7 +14,7 @@
 #import "Monoalphabetic.h"
 #import "MorseCode.h"
 #import "RailFence.h"
-#import "Rot13.h"
+#import "ROT13.h"
 #import "Vigenere.h"
 
 @interface cipher_sender_unit_tests : XCTestCase
@@ -157,18 +157,18 @@
     XCTAssertEqualObjects(expectedPlainText, plainText);
 }
 
-- (void)testRot13Encrypt {
+- (void)testROT13Encrypt {
     NSString *plainText = @"abcdefghijklmnopqrstuvwxyz";
     NSString *expectedCipherText = @"nopqrstuvwxyzabcdefghijklm";
-    Rot13 *rot13 = [[Rot13 alloc] init];
+    ROT13 *rot13 = [[ROT13 alloc] init];
     NSString *cipherText = [rot13 encrypt:plainText];
     XCTAssertEqualObjects(expectedCipherText, cipherText);
 }
 
-- (void)testRot13Decrypt {
+- (void)testROT13Decrypt {
     NSString *cipherText = @"nopqrstuvwxyzabcdefghijklm";
     NSString *expectedPlainText = @"abcdefghijklmnopqrstuvwxyz";
-    Rot13 *rot13 = [[Rot13 alloc] init];
+    ROT13 *rot13 = [[ROT13 alloc] init];
     NSString *plainText = [rot13 decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plainText);
 }

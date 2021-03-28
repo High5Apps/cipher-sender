@@ -26,7 +26,7 @@
 		C28EC80D1F864DF300FA6B00 /* Vigenere.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC7FB1F864DF100FA6B00 /* Vigenere.m */; };
 		C28EC80E1F864DF300FA6B00 /* A1Z26.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC7FD1F864DF200FA6B00 /* A1Z26.m */; };
 		C28EC80F1F864DF300FA6B00 /* Monoalphabetic.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC7FE1F864DF200FA6B00 /* Monoalphabetic.m */; };
-		C28EC8101F864DF300FA6B00 /* Rot13.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC8001F864DF200FA6B00 /* Rot13.m */; };
+		C28EC8101F864DF300FA6B00 /* ROT13.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC8001F864DF200FA6B00 /* ROT13.m */; };
 		C28EC8111F864DF300FA6B00 /* MorseCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC8051F864DF200FA6B00 /* MorseCode.m */; };
 		C28EC8121F864DF300FA6B00 /* CaesarCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC8061F864DF200FA6B00 /* CaesarCipher.m */; };
 		C28EC8131F864DF300FA6B00 /* CipherFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C28EC8071F864DF300FA6B00 /* CipherFactory.m */; };
@@ -83,7 +83,7 @@
 		C28EC7FD1F864DF200FA6B00 /* A1Z26.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A1Z26.m; sourceTree = "<group>"; };
 		C28EC7FE1F864DF200FA6B00 /* Monoalphabetic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Monoalphabetic.m; sourceTree = "<group>"; };
 		C28EC7FF1F864DF200FA6B00 /* CipherFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherFactory.h; sourceTree = "<group>"; };
-		C28EC8001F864DF200FA6B00 /* Rot13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rot13.m; sourceTree = "<group>"; };
+		C28EC8001F864DF200FA6B00 /* ROT13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROT13.m; sourceTree = "<group>"; };
 		C28EC8011F864DF200FA6B00 /* KeyboardShift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardShift.h; sourceTree = "<group>"; };
 		C28EC8021F864DF200FA6B00 /* Vigenere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vigenere.h; sourceTree = "<group>"; };
 		C28EC8031F864DF200FA6B00 /* CaesarCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaesarCipher.h; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		C28EC8071F864DF300FA6B00 /* CipherFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherFactory.m; sourceTree = "<group>"; };
 		C28EC8081F864DF300FA6B00 /* Monoalphabetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Monoalphabetic.h; sourceTree = "<group>"; };
 		C28EC8091F864DF300FA6B00 /* Atbash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Atbash.m; sourceTree = "<group>"; };
-		C28EC80A1F864DF300FA6B00 /* Rot13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rot13.h; sourceTree = "<group>"; };
+		C28EC80A1F864DF300FA6B00 /* ROT13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROT13.h; sourceTree = "<group>"; };
 		C28EC8151F8655EE00FA6B00 /* CipherPickerTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherPickerTVC.h; sourceTree = "<group>"; };
 		C28EC8161F8655EE00FA6B00 /* CipherPickerTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherPickerTVC.m; sourceTree = "<group>"; };
 		C2971F731F88F83E00C5B264 /* AboutCiphersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutCiphersTableViewController.h; sourceTree = "<group>"; };
@@ -233,8 +233,8 @@
 				C28EC8051F864DF200FA6B00 /* MorseCode.m */,
 				C28EC7FC1F864DF200FA6B00 /* RailFence.h */,
 				C28EC7F81F864DF100FA6B00 /* RailFence.m */,
-				C28EC80A1F864DF300FA6B00 /* Rot13.h */,
-				C28EC8001F864DF200FA6B00 /* Rot13.m */,
+				C28EC80A1F864DF300FA6B00 /* ROT13.h */,
+				C28EC8001F864DF200FA6B00 /* ROT13.m */,
 				C28EC8021F864DF200FA6B00 /* Vigenere.h */,
 				C28EC7FB1F864DF100FA6B00 /* Vigenere.m */,
 			);
@@ -389,7 +389,7 @@
 				C2091D2B1F8530C500ADC34B /* CustomButton.m in Sources */,
 				C28EC8171F8655EE00FA6B00 /* CipherPickerTVC.m in Sources */,
 				C28EC8111F864DF300FA6B00 /* MorseCode.m in Sources */,
-				C28EC8101F864DF300FA6B00 /* Rot13.m in Sources */,
+				C28EC8101F864DF300FA6B00 /* ROT13.m in Sources */,
 				C28EC7F01F864DDA00FA6B00 /* KeylessCipher.m in Sources */,
 				C28EC7F11F864DDA00FA6B00 /* AbstractCipher.m in Sources */,
 				C28EC7F61F864DE600FA6B00 /* Alphabet.m in Sources */,

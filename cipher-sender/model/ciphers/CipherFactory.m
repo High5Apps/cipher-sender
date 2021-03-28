@@ -9,7 +9,7 @@
 #import "CipherFactory.h"
 #import "AbstractCipher.h"
 #import "Atbash.h"
-#import "Rot13.h"
+#import "ROT13.h"
 #import "KeyboardShift.h"
 #import "A1Z26.h"
 #import "MorseCode.h"
@@ -43,7 +43,7 @@ static NSArray *cipherClasses;
             [Monoalphabetic class],
             [MorseCode class],
             [RailFence class],
-            [Rot13 class],
+            [ROT13 class],
             [Vigenere class],
         ];
     }
