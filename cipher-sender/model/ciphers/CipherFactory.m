@@ -11,7 +11,7 @@
 #import "Atbash.h"
 #import "Rot13.h"
 #import "KeyboardCode.h"
-#import "LetterNumber.h"
+#import "A1Z26.h"
 #import "MorseCode.h"
 #import "CaesarCipher.h"
 #import "Monoalphabetic.h"
@@ -36,10 +36,10 @@ static NSArray *cipherClasses;
 + (NSArray *)cipherClasses{
     if (cipherClasses == nil) {
         cipherClasses = @[
+            [A1Z26 class],
             [Atbash class],
             [CaesarCipher class],
             [KeyboardCode class],
-            [LetterNumber class],
             [Monoalphabetic class],
             [MorseCode class],
             [RailFence class],

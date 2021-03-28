@@ -1,5 +1,5 @@
 //
-//  LetterNumber.h
+//  A1Z26.h
 //  Cipher Sender
 //
 //  Created by Julian Tigler on 6/23/12.
@@ -8,7 +8,7 @@
 
 #import "KeylessCipher.h"
 
-@interface LetterNumber : KeylessCipher
+@interface A1Z26 : KeylessCipher
 
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key;
 - (Text *) decryptionMethodForCiphertext:(Text *) ciphertext withKey: (NSString *)key;

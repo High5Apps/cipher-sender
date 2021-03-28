@@ -7,10 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "A1Z26.h"
 #import "Atbash.h"
 #import "CaesarCipher.h"
 #import "KeyboardCode.h"
-#import "LetterNumber.h"
 #import "Monoalphabetic.h"
 #import "MorseCode.h"
 #import "RailFence.h"
@@ -31,6 +31,22 @@
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+}
+
+- (void)testA1Z26Encrypt {
+    NSString *plainText = @"abcdefghijklmnopqrstuvwxyz";
+    NSString *expectedCipherText = @"0102030405060708091011121314151617181920212223242526";
+    AbstractCipher *cipher = [[A1Z26 alloc] init];
+    NSString *cipherText = [cipher encrypt:plainText];
+    XCTAssertEqualObjects(expectedCipherText, cipherText);
+}
+
+- (void)testA1Z26Decrypt {
+    NSString *cipherText = @"0102030405060708091011121314151617181920212223242526";
+    NSString *expectedPlainText = @"abcdefghijklmnopqrstuvwxyz";
+    AbstractCipher *cipher = [[A1Z26 alloc] init];
+    NSString *plaintext = [cipher decrypt:cipherText];
+    XCTAssertEqualObjects(expectedPlainText, plaintext);
 }
 
 - (void)testAtbashEncrypt {
@@ -82,22 +98,6 @@
     NSString *expectedPlainText = @"abcdefghijklmnopqrstuvwxyz";
     KeyboardCode *keyboardCode = [[KeyboardCode alloc] init];
     NSString *plaintext = [keyboardCode decrypt:cipherText];
-    XCTAssertEqualObjects(expectedPlainText, plaintext);
-}
-
-- (void)testLetterNumberCodeEncrypt {
-    NSString *plainText = @"abcdefghijklmnopqrstuvwxyz";
-    NSString *expectedCipherText = @"0102030405060708091011121314151617181920212223242526";
-    LetterNumber *letterNumber = [[LetterNumber alloc] init];
-    NSString *cipherText = [letterNumber encrypt:plainText];
-    XCTAssertEqualObjects(expectedCipherText, cipherText);
-}
-
-- (void)testLetterNumberCodeDecrypt {
-    NSString *cipherText = @"0102030405060708091011121314151617181920212223242526";
-    NSString *expectedPlainText = @"abcdefghijklmnopqrstuvwxyz";
-    LetterNumber *letterNumber = [[LetterNumber alloc] init];
-    NSString *plaintext = [letterNumber decrypt:cipherText];
     XCTAssertEqualObjects(expectedPlainText, plaintext);
 }
 

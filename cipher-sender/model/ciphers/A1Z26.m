@@ -1,17 +1,17 @@
 //
-//  LetterNumber.m
+//  A1Z26.m
 //  Cipher Sender
 //
 //  Created by Julian Tigler on 6/23/12.
 //  Copyright (c) 2012 Duke. All rights reserved.
 //
 
-#import "LetterNumber.h"
+#import "A1Z26.h"
 
-@implementation LetterNumber
+@implementation A1Z26
 
-static NSString * const NAME = @"Letter-Number Code";
-static NSString * const INFO = @"The Letter-Number Code simply replaces the letter with its two-digit position in the alphabet. 'a' is changed into 01, 'b' to 02, 'c' to 03, etc. For example 'Able' is transformed into 01021205.";
+static NSString * const NAME = @"A1Z26 Cipher";
+static NSString * const INFO = @"The A1Z26 Cipher replaces the letter with its two-digit position in the alphabet. 'a' is changed into 01, 'b' to 02, 'c' to 03, etc. For example 'Able' is transformed into 01021205.";
 
 - (Text *) encryptionMethodForPlaintext:(Text *) plaintext withKey: (NSString *)key{
     NSMutableArray *replacements = [[NSMutableArray alloc] initWithCapacity:[Alphabet NUM_LETTERS]];
@@ -46,7 +46,7 @@ static NSString * const INFO = @"The Letter-Number Code simply replaces the lett
         if ([exception.name isEqualToString:@"NSRangeException"]) {
             NSLog(@"Caught nsr");
             NSString *unevenText = [ciphertext description];
-            return [[Text alloc] initWithString:[NSString stringWithFormat:@"!!!Invalid Letter-Number Ciphertext: There must be an even number of digits present and no instances of 00 should occur. %@", unevenText]];
+            return [[Text alloc] initWithString:[NSString stringWithFormat:@"!!!Invalid A1Z26 Ciphertext: There must be an even number of digits present and no instances of 00 should occur. %@", unevenText]];
         }
     }
 }
