@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property (strong, nonatomic) IBOutlet UIButton *cipherTypeButton;
 @property (strong, nonatomic) IBOutlet UIButton *clearButton;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 - (IBAction)encipher:(id)sender;
 - (IBAction)decipher:(id)sender;

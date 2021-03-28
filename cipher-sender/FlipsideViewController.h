@@ -19,6 +19,7 @@
 @interface FlipsideViewController : UIViewController<MFMailComposeViewControllerDelegate, AboutCiphersTableViewControllerDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) id <FlipsideViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 - (IBAction)done:(id)sender;
 - (IBAction)about:(id)sender;

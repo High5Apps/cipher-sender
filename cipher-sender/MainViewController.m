@@ -149,6 +149,7 @@
     NSString *text = self.textView.text;
     NSArray *items = @[text];
     UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+    controller.popoverPresentationController.sourceView = self.shareButton;
     [self presentViewController:controller animated:YES completion:NULL];
 }
 

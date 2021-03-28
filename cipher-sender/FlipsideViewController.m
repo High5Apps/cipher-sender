@@ -53,6 +53,7 @@
     NSString *text = @"Let's send secret messages! Get Cipher Sender free on the app store: https://apple.co/2PgMzzj";
     NSArray *items = @[text];
     UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+    controller.popoverPresentationController.sourceView = self.shareButton;
     [self presentViewController:controller animated:YES completion:NULL];
 }
 
