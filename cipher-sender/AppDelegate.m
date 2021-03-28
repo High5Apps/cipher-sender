@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     self.window.overrideUserInterfaceStyle = UIUserInterfaceStyleDark;
-    self.window.tintColor = [UIColor greenColor];
+    self.window.tintColor = UIColor.systemGreenColor;
     
     self.viewController = (MainViewController *)self.window.rootViewController;
     
